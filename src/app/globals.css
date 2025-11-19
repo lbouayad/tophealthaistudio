@@ -1,0 +1,406 @@
+@font-face {
+  font-family: 'IsabellaGrand';
+  src: url('/fonts/isabella_grand-webfont.woff2') format('woff2'),
+       url('/fonts/isabella_grand-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IsabellaGrandItalic';
+  src: url('/fonts/isabella_grand_italic-webfont.woff2') format('woff2'),
+       url('/fonts/isabella_grand_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'IsabellaGrandPlain';
+  src: url('/fonts/isabella_grand_plain_f-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,500;0,9..40,700;1,9..40,100;1,9..40,500&family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Serif&family=Nunito&family=PT+Serif:ital@0;1&family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply overflow-x-hidden overflow-y-auto leading-relaxed;
+  }
+
+  .mainHeading {
+    @apply font-bold text-textGray text-[32px]
+  }
+
+  .cellStyle {
+    @apply border-2 border-black py-1.5 px-3 whitespace-nowrap text-center bg-white text-xs font-medium
+  }
+
+  .timeTableCellStyle {
+    @apply border-2 border-black py-4 px-2 whitespace-nowrap text-center bg-white text-sm font-bold
+  }
+
+  .breakCellStyle {
+    @apply py-4 px-2 whitespace-nowrap text-center bg-white text-sm font-bold
+  }
+
+  .cellStyleTiming {
+    @apply border border-black md:py-5 py-3 md:px-8 px-4 whitespace-nowrap text-center
+  }
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+}
+
+body {
+  /* background-color: #fffbf7 !important; */
+  background-image: url("/HeaderImage5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Isabella" !important;
+}
+
+.emptyCell {
+  background-color: #cdd6dc;
+}
+
+.removeScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+  font-family: 'IsabellaGrand', sans-serif !important;
+}
+
+h2,
+p,
+li,
+div,
+label,
+span,
+button,
+textarea,
+tr,
+select {
+  font-family: "montserrat";
+}
+
+/* Trianlges */
+.triangle-left {
+  width: 0;
+  border-right: 70px solid transparent;
+  border-bottom: 150px solid #302124;
+}
+
+.triangle-right {
+  width: 0;
+  border-left: 140px solid transparent;
+  border-bottom: 314px solid #302124;
+}
+
+.triangle-top {
+  clip-path: polygon(0 0, 100% 0, 100% 19%, 0 7%);
+}
+
+.triangle-bottom {
+  clip-path: polygon(100% 88%, 40% 100%, 100% 100%);
+}
+
+/* Diagonal cut styles */
+.diagonalCut {
+  clip-path: polygon(0 0%, 100% 0, 100% 75%, 0 100%);
+}
+
+@media (max-width: 768px) {
+  .diagonalCut {
+    clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+  }
+}
+
+.skew {
+  transform:
+    perspective(600px) rotatey(20deg);
+}
+
+.skewText {
+  transform:
+    perspective(600px) rotatey(-20deg);
+}
+
+.sectionTriangle {
+  clip-path: polygon(46% 0, 0 3.2%, 0 24%);
+}
+
+.leaderCurve {
+  /* clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%); */
+  clip-path: polygon(56% 0, 0 100%, 100% 100%);
+}
+
+.leaderCurveSmall {
+  clip-path: polygon(0 0, 100% 0, 100% 53%, 0 74%);
+}
+
+.custom_svg_border {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0%25' y='0%25' width='100%25' height='100%25' fill='transparent' stroke='black' stroke-width='4px' stroke-dasharray='0 60% 190% 500%' /%3E%3C/svg%3E");
+}
+
+/* Accordion */
+.answer_wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.3s;
+}
+
+/* Radio Buttons */
+.radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+
+.radio-custom+.radio-custom-label:before {
+  content: '';
+  background: #fff;
+  border: 2px solid #272F54;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.radio-custom+.radio-custom-label:before {
+  border-radius: 50%;
+}
+
+.radio-custom:checked+.radio-custom-label:before {
+  background: #272F54;
+  box-shadow: inset 0px 0px 0px 4px #fff;
+}
+
+/* Dropdown */
+.dropdown-content {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.07);
+}
+
+.dropdown-content .item:hover {
+  background: #5B5C5C;
+  color: white;
+}
+
+/* Modal */
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  animation: modal-appear 0.3s ease-out;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.squareList {
+  list-style-type: square;
+}
+
+.languageTriangle {
+  clip-path: polygon(78% 0, 22% 0, 50% 50%);
+}
+
+.languageTriangleSmall {
+  clip-path: polygon(74% 0, 26% 0, 50% 24%);
+}
+
+.subject-triangle {
+  width: 0;
+  height: 0;
+  border-top: 125px solid transparent;
+  border-left: 300px solid orange;
+  border-bottom: 125px solid transparent;
+  /* border-radius: 100px; */
+}
+
+.sacleItem:hover {
+  transform: scale(1.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.hexagon {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.upDownAnimation {
+  animation: MoveUpDown 2.6s linear infinite;
+}
+
+@keyframes MoveUpDown {
+
+  0%,
+  100% {
+    bottom: 10px;
+  }
+
+  50% {
+    bottom: 50px;
+  }
+}
+
+.rightLeftAnimation {
+  animation: MoveRightLeft 2.2s linear infinite;
+}
+
+@keyframes MoveRightLeft {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0eg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.beeUpDownAnimation {
+  animation: BeeUpDown 2s linear infinite;
+}
+
+@keyframes BeeUpDown {
+
+  0%,
+  100% {
+    top: 240px;
+  }
+
+  50% {
+    top: 270px;
+  }
+}
+
+.beeLeftRightAnimation {
+  animation: BeeLeftRight 2.4s linear infinite;
+}
+
+@keyframes BeeLeftRight {
+
+  0%,
+  100% {
+    right: 435px;
+  }
+
+  50% {
+    right: 465px;
+  }
+}
+
+.starAnimation {
+  animation: StarScale 4s infinite;
+}
+
+@keyframes StarScale {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1.13);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.placeholderColor::placeholder {
+  color: white;
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
