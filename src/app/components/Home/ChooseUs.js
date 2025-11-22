@@ -16,7 +16,7 @@ const ChooseUs = () => {
 
     return (
         <div id='choose-us' className='w-full items-center justify-center flex flex-col pt-14 lg:pb-52 pb-20 relative overflow-hidden relative z-10'>
-            <h1 className='mainHeading text-lightBrown uppercase text-center'>Why Choose Top Health AI?</h1>
+            <h1 className='mainHeading text-lightBrown uppercase text-center'>Why Choose Applina</h1>
             <div data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="400"
                 className='relative pt-[11.2rem] w-full max-w-[1525px] hidden lg:flex items-center justify-center z-50'>
                 <div className='w-56 h-56 rounded-full border-[0.3rem] border-lightBrown flex items-center justify-center'>
@@ -29,7 +29,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaStar className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Peer Ratings & Transparency</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Made for Health and Wellness</h2>
                     </div>
                     <div className='w-28 border-t-2 border-t-lightBrown absolute rotate-[56deg] top-[6.84rem] left-[15rem] lg:block hidden' />
                 </div>
@@ -40,7 +40,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaRobot className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Curated Real-World AI Agents</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Build Your Own AI Staff</h2>
                     </div>
                     <div className='w-28 border-t-2 border-t-lightBrown absolute -rotate-[56deg] top-[6.9rem] -left-[2.5rem] lg:block hidden' />
                 </div>
@@ -51,7 +51,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaSearch className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Searchable, Sortable Listings</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Built on Real Provider Insight</h2>
                     </div>
                     <div className='w-20 border-t-2 border-t-lightBrown absolute top-[3rem] left-[18.3rem] z-20 lg:block hidden' />
                 </div>
@@ -62,7 +62,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaCode className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>No-Code Participation</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>No Code Needed</h2>
                     </div>
                     <div className='w-20 border-t-2 border-t-lightBrown absolute top-[3rem] -left-[3.68rem] z-20 lg:block hidden' />
                 </div>
@@ -73,7 +73,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaLightbulb className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Built for Healthcare Innovators</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Smart Search</h2>
                     </div>
                     <div className='w-24 border-t-2 border-t-lightBrown absolute -rotate-[56deg] -top-[0.6rem] left-[17rem] z-20 lg:block hidden' />
                 </div>
@@ -84,7 +84,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <LuHandshake className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Support for Educators & Students</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Ideal for Learning and Professional Development</h2>
                     </div>
                     <div className='w-24 border-t-2 border-t-lightBrown absolute rotate-[56deg] -top-[1rem] -left-[2.4rem] z-20 lg:block hidden' />
                 </div>
@@ -98,7 +98,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaStar className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Peer Ratings & Transparency</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Made for Health and Wellness</h2>
                     </div>
                 </div>
 
@@ -108,7 +108,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaRobot className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Curated Real-World AI Agents</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Build Your Own AI Staff</h2>
                     </div>
                 </div>
 
@@ -118,7 +118,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaSearch className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Searchable, Sortable Listings</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Built on Real Provider Insight</h2>
                     </div>
                 </div>
 
@@ -132,7 +132,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaCode className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>No-Code Participation</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>No Code Needed</h2>
                     </div>
                 </div>
 
@@ -142,7 +142,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaLightbulb className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Built for Healthcare Innovators</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Smart Search</h2>
                     </div>
                 </div>
 
@@ -152,7 +152,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <LuHandshake className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Support for Educators & Students</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Ideal for Learning and Professional Development</h2>
                     </div>
                 </div>
             </div>

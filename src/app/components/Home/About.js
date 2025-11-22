@@ -19,12 +19,15 @@ const About = () => {
           About Us
         </h1>
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl  pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Top Health AI Studio is the experimentation and evaluation playground
-          of Top Health AI. Our mission is to accelerate adoption of clinically
-          relevant AI by supporting early testing, alignment, and informed
-          decision-making. Whether you&apos;re a physician, educator, student,
-          or researcher, we provide a collaborative space to try tools that
-          already exist—and contribute to what works.
+          Applina is the platform that allows health and wellness providers to create, personalize, and deploy AI staff members for their clinic.
+          Our mission is to make AI accessible and practical for every clinic, med spa, therapy office, and wellness center.
+        </p>
+        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl  pt-4 text-justify md:px-0 sm:px-14 px-0">
+          Any provider can create AI staff for intake, scheduling, scribing, follow-up, or customer communication.
+          No technical background is required.
+        </p>
+        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl  pt-4 text-justify md:px-0 sm:px-14 px-0">
+          Applina supports multi-language capabilities and phone numbers in many countries so providers can care for patients in the way that fits their community.
         </p>
       </div>
       <div className="md:w-1/2 w-full relative flex items-center justify-center gap-x-4 md:pt-0 pt-16">

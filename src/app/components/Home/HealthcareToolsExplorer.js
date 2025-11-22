@@ -28,76 +28,76 @@ import { Card, CardContent } from "@/components/ui/card";
 const healthcareTools = [
   {
     id: 1,
-    title: "PreOp Risk Assistant",
-    description: "Reduce complications",
-    icon: Stethoscope,
-    specialty: "Surgery",
-    outcome: "Reduce complications",
-    attributes: ["Risk Assessment", "Surgery"],
+    title: "AI Receptionist Lite",
+    description: "Supports patient communication and intake",
+    icon: Users,
+    specialty: "Reception",
+    outcome: "Primary Care and Med Spa",
+    attributes: ["Reception", "Communication"],
     rating: 4,
-    reviews: 28,
-    githubUrl: "https://github.com/preop-risk-assistant",
-    demoUrl: "https://preop-risk-assistant.com",
+    reviews: 42,
+    githubUrl: "#",
+    demoUrl: "#",
     featured: true,
     compliance: "HIPAA-safe",
   },
   {
     id: 2,
-    title: "Cancer Note Reviewer",
-    description: "Improve documentation",
-    icon: FileText,
-    specialty: "Oncology",
-    outcome: "Improve documentation",
-    attributes: ["Documentation", "Oncology"],
-    rating: 5,
-    reviews: 42,
-    githubUrl: "https://github.com/cancer-note-reviewer",
-    demoUrl: "https://cancer-note-reviewer.com",
+    title: "Pre Op and Intake Assistant",
+    description: "Improves preparation and intake quality",
+    icon: ClipboardList,
+    specialty: "Intake",
+    outcome: "Surgery and Wellness",
+    attributes: ["Intake", "Surgery"],
+    rating: 4,
+    reviews: 28,
+    githubUrl: "#",
+    demoUrl: "#",
     featured: true,
     compliance: "HIPAA-safe",
   },
   {
     id: 3,
-    title: "Pain Pattern Mapper",
-    description: "Support triage decisions",
+    title: "Pain Pattern Triage Assistant",
+    description: "Improves clinical routing",
     icon: Brain,
-    specialty: "Pain Management",
-    outcome: "Support triage decisions",
+    specialty: "Triage",
+    outcome: "Pain Management and Physical Therapy",
     attributes: ["Triage", "Pain Management"],
     rating: 4,
     reviews: 35,
-    githubUrl: "https://github.com/pain-pattern-mapper",
-    demoUrl: "https://pain-pattern-mapper.com",
+    githubUrl: "#",
+    demoUrl: "#",
     featured: true,
     compliance: "HIPAA-safe",
   },
   {
     id: 4,
-    title: "Cognitive Check-In Bot",
-    description: "Boost follow-ups",
-    icon: MessageSquare,
-    specialty: "Psychiatry",
-    outcome: "Boost follow-ups",
-    attributes: ["Follow-ups", "Psychiatry"],
-    rating: 3,
-    reviews: 18,
-    githubUrl: "https://github.com/cognitive-checkin-bot",
-    demoUrl: "https://cognitive-checkin-bot.com",
+    title: "Auto Scribe Lite",
+    description: "Reduces charting burden",
+    icon: FileText,
+    specialty: "Scribing",
+    outcome: "Primary Care and Therapy",
+    attributes: ["Scribing", "Primary Care"],
+    rating: 4,
+    reviews: 31,
+    githubUrl: "#",
+    demoUrl: "#",
     featured: true,
     compliance: "HIPAA-safe",
   },
   {
     id: 5,
-    title: "Auto-Scribe Lite",
-    description: "Reduce charting burden",
-    icon: ClipboardList,
-    specialty: "Primary Care",
-    outcome: "Reduce charting burden",
-    attributes: ["Charting", "Primary Care"],
-    rating: 4,
-    reviews: 31,
-    githubUrl: "https://github.com/auto-scribe-lite",
-    demoUrl: "",
+    title: "Follow Up and Recall Assistant",
+    description: "Improves patient retention",
+    icon: Bell,
+    specialty: "Follow Up",
+    outcome: "Psychiatry and Wellness",
+    attributes: ["Follow-ups", "Psychiatry"],
+    rating: 3,
+    reviews: 18,
+    githubUrl: "#",
+    demoUrl: "#",
     featured: true,
     compliance: "HIPAA-safe",
   },
@@ -105,32 +105,32 @@ const healthcareTools = [
 
 const specialties = [
   "All",
-  "Surgery",
-  "Oncology",
-  "Pain Management",
-  "Psychiatry",
-  "Primary Care",
+  "Reception",
+  "Intake",
+  "Triage",
+  "Scribing",
+  "Follow Up",
 ];
 const outcomes = [
   "All",
-  "Reduce complications",
-  "Improve documentation",
-  "Support triage decisions",
-  "Boost follow-ups",
-  "Reduce charting burden",
+  "Primary Care and Med Spa",
+  "Surgery and Wellness",
+  "Pain Management and Physical Therapy",
+  "Primary Care and Therapy",
+  "Psychiatry and Wellness",
 ];
 const attributes = [
   "All",
-  "Risk Assessment",
-  "Documentation",
-  "Triage",
-  "Follow-ups",
-  "Charting",
+  "Reception",
+  "Communication",
+  "Intake",
   "Surgery",
-  "Oncology",
+  "Triage",
   "Pain Management",
-  "Psychiatry",
+  "Scribing",
   "Primary Care",
+  "Follow-ups",
+  "Psychiatry",
 ];
 const sortOptions = ["Recommended", "Rating", "Reviews", "Name"];
 
@@ -186,7 +186,7 @@ export function HealthcareToolsExplorer() {
       {/* Main Content */}
       <div className="xl:px-32 lg:px-16 px-8 py-12">
         <h2 className="text-3xl font-bold mb-8 text-foreground">
-          Explore Healthcare AI Tools
+          Explore Health and Wellness AI Assistants
         </h2>
 
         {/* Filters */}
@@ -343,7 +343,7 @@ export function HealthcareToolsExplorer() {
                           onClick={() => window.open(tool.githubUrl, "_blank")}
                         >
                           <Github className="h-4 w-4 mr-2" />
-                          Code
+                          Build
                         </Button>
                         <Button
                           variant="outline"
@@ -355,7 +355,7 @@ export function HealthcareToolsExplorer() {
                           disabled={!tool.demoUrl}
                         >
                           <PlayCircle className="h-4 w-4 mr-2" />
-                          Live Demo
+                          Preview
                         </Button>
                       </div>
                     </div>

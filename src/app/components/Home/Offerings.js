@@ -41,9 +41,9 @@ const Offers = () => {
           />
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">AI Agent Explorer</h1>
+              <h1 className="font-bold text-lg">AI Assistant Builder</h1>
               <p className="pt-1 text-sm">
-                Browse and test AI tools built for frontline healthcare.
+                Create AI staff for calls, scheduling, intake, scribing, and patient support.
               </p>
             </div>
           </div>
@@ -86,7 +86,7 @@ const Offers = () => {
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
               <h1 className="font-bold text-lg">Educational Integration</h1>
               <p className="pt-1 text-sm">
-                Use agents in classrooms, capstone projects, or research.
+                Use AI tools in classrooms, academic projects, or demonstrations.
               </p>
             </div>
           </div>
@@ -127,9 +127,9 @@ const Offers = () => {
           />
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">Live Agent Reviews</h1>
+              <h1 className="font-bold text-lg">Live AI Reviews</h1>
               <p className="pt-1 text-sm">
-                Share structured feedback and earn recognition.
+                Share feedback and help refine future templates for other providers.
               </p>
             </div>
           </div>
@@ -170,9 +170,9 @@ const Offers = () => {
           />
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">Digital Sandbox Access</h1>
+              <h1 className="font-bold text-lg">Deployment Tools</h1>
               <p className="pt-1 text-sm">
-                Securely explore AI tools aligned to your goals.
+                Launch AI staff across phone, text, chat, or WhatsApp.
               </p>
             </div>
           </div>
