@@ -14,14 +14,15 @@ const EnrollmentSteps = () => {
   return (
     <div
       id="enrollment"
-      className="w-full items-center justify-center flex flex-col text-center pt-16 pb-28 relative xl:px-0 lg:px-16 sm:px-8 px-4 relative z-20 bg-lightBrown"
+      className="w-full items-center justify-center flex flex-col text-center pt-16 pb-28 relative xl:px-0 lg:px-16 sm:px-8 px-4 z-20 bg-lightBrown"
     >
       <h1 className="mainHeading text-brown uppercase">Enrollment</h1>
       <h1 className="mainHeading text-brown">
-        Steps Taken with Purpose, Precision & Impact
+        Steps Guided by Purpose, Rigor, and Clinical Responsibility
       </h1>
 
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-20 lg:gap-y-0 gap-y-20 items-center justify-center pt-24 relative">
+        {/* 01 */}
         <div className="relative group">
           <UpperCurve
             className={
@@ -37,14 +38,17 @@ const EnrollmentSteps = () => {
             <h2 className="text-xl pt-2">
               Explore
               <br />
-              Tools
+              Programs
             </h2>
           </div>
-          {/* Popover Tooltip */}
-          <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Review AI staff templates that match your workflow
+
+          {/* Tooltip */}
+          <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            Review courses and evaluation frameworks aligned to real clinical workflows.
           </div>
         </div>
+
+        {/* 02 */}
         <div className="relative group">
           <BottomCurve
             className={
@@ -60,14 +64,17 @@ const EnrollmentSteps = () => {
             <h2 className="text-xl pt-2">
               Request
               <br />
-              Access
+              Enrollment
             </h2>
           </div>
-          {/* Popover Tooltip */}
-          <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Create your account and confirm your use case
+
+          {/* Tooltip */}
+          <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            Submit your program interest and indicate your educational or research goals.
           </div>
         </div>
+
+        {/* 03 */}
         <div className="relative group">
           <UpperCurve
             className={
@@ -82,11 +89,14 @@ const EnrollmentSteps = () => {
             <h2 className="text-3xl">03</h2>
             <h2 className="text-xl pt-2">Orientation</h2>
           </div>
-          {/* Popover Tooltip */}
-          <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Learn how to build, personalize, and deploy your AI staff
+
+          {/* Tooltip */}
+          <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-60 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            Learn expectations, evaluation methods, and clinical accountability boundaries.
           </div>
         </div>
+
+        {/* 04 */}
         <div className="relative group">
           <BottomCurve
             className={
@@ -99,23 +109,32 @@ const EnrollmentSteps = () => {
             className="bg-orange text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
           >
             <h2 className="text-3xl">04</h2>
-            <h2 className="text-xl pt-2">Build and Launch</h2>
+            <h2 className="text-xl pt-2">
+              Apply
+              <br />
+              and Evaluate
+            </h2>
           </div>
-          {/* Popover Tooltip */}
-          <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Deploy your AI employee on phone, SMS, chat, or WhatsApp today
+
+          {/* Tooltip */}
+          <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-64 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            Use prototypes and structured testing to assess workflow impact and readiness for practice.
           </div>
         </div>
       </div>
 
       <div className="flex flex-col items-center justify-center mt-24">
         <Link
-          href="https://calendly.com/d/cq5y-3yd-6gs/join-our-ai-powered-specialist-network"
+          href="https://medaistudio.moodlecloud.com/"
           target="_blank"
           className="bg-orange text-white uppercase text-sm md:text-md font-bold tracking-wide px-6 sm:px-10 md:px-16 lg:px-20 py-4 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
         >
-          Exclusive Provider Onboarding <br /> Schedule Now
+          Access Courses <br /> (CME Accreditation in Progress)
         </Link>
+
+        <p className="text-brown text-sm md:text-base mt-4 max-w-2xl">
+          Continuing medical education (CME) accreditation is currently in progress. Course access and participation are available through our learning platform.
+        </p>
       </div>
     </div>
   );
