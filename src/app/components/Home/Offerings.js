@@ -1,11 +1,19 @@
 "use client";
+
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Offers = () => {
   useEffect(() => {
-    Aos.init();
+    // Prevent SSR/window issues in Next.js App Router
+    if (typeof window === "undefined") return;
+
+    Aos.init({
+      duration: 1200,
+      once: true,
+      disableMutationObserver: true,
+    });
   }, []);
 
   return (
@@ -19,7 +27,6 @@ const Offers = () => {
         {/* Offering 1 */}
         <div
           data-aos="zoom-in"
-          data-aos-duration="1200"
           className="w-56 bg-slate-200 text-white text-center mx-auto"
         >
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
@@ -43,7 +50,7 @@ const Offers = () => {
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">Applied Health AI Courses</h1>
+              <h2 className="font-bold text-lg">Applied Health AI Courses</h2>
               <p className="pt-1 text-sm">
                 Structured learning in clinical AI, workflow evaluation, and implementation rigor.
                 CME accreditation is currently in progress.
@@ -67,7 +74,6 @@ const Offers = () => {
         {/* Offering 2 */}
         <div
           data-aos="zoom-in"
-          data-aos-duration="1200"
           className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
         >
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
@@ -91,10 +97,10 @@ const Offers = () => {
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">Prototype-Based Testing</h1>
+              <h2 className="font-bold text-lg">Prototype-Based Testing</h2>
               <p className="pt-1 text-sm">
-                Guided evaluation of AI behavior in simulated workflows—edge cases,
-                escalation boundaries, and documentation reliability.
+                Guided evaluation of AI behavior in simulated workflows—edge cases, escalation boundaries,
+                and documentation reliability.
               </p>
             </div>
           </div>
@@ -115,7 +121,6 @@ const Offers = () => {
         {/* Offering 3 */}
         <div
           data-aos="zoom-in"
-          data-aos-duration="1200"
           className="w-56 bg-slate-200 text-white text-center mx-auto"
         >
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
@@ -139,10 +144,10 @@ const Offers = () => {
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">Workflow Evaluation Frameworks</h1>
+              <h2 className="font-bold text-lg">Workflow Evaluation Frameworks</h2>
               <p className="pt-1 text-sm">
                 Methods to assess clinical risk, operational impact, and implementation readiness
-                across real care environments.
+                across care environments.
               </p>
             </div>
           </div>
@@ -163,7 +168,6 @@ const Offers = () => {
         {/* Offering 4 */}
         <div
           data-aos="zoom-in"
-          data-aos-duration="1200"
           className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
         >
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
@@ -187,10 +191,10 @@ const Offers = () => {
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">Research Collaboration</h1>
+              <h2 className="font-bold text-lg">Research Collaboration</h2>
               <p className="pt-1 text-sm">
-                Partnership pathways for academic teams and institutions to study responsible clinical
-                AI implementation and evaluation.
+                Partnership pathways for academic teams and institutions to study responsible clinical AI
+                implementation and evaluation.
               </p>
             </div>
           </div>
