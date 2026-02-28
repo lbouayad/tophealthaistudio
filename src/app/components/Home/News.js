@@ -31,7 +31,7 @@ const data = [
     title: "Learning Platform Access",
     desc: "Courses and materials are available through our dedicated learning environment, supporting structured coursework, prototype exercises, and evaluation tools in one place.",
   },
-]
+];
 
 const News = () => {
   const responsiveSlidesPerView = {
@@ -42,14 +42,13 @@ const News = () => {
 
   const pagination = {
     clickable: true,
-    renderBullet: function (index: number, className: string) {
+    renderBullet: function (index, className) {
       return (
         '<span class="' +
         className +
-        '"style="width: 24; height: 24;background-color:#FDE74C">' +
-        "</span>"
+        '" style="width:24px;height:24px;background-color:#FDE74C;"></span>'
       );
-    }
+    },
   };
 
   return (
