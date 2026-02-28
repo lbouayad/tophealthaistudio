@@ -9,6 +9,7 @@ const About = () => {
   useEffect(() => {
     Aos.init();
   }, []);
+
   return (
     <div
       id="about-us"
@@ -18,18 +19,29 @@ const About = () => {
         <h1 className="text-brown text-3xl font-bold md:text-start text-center uppercase">
           About Us
         </h1>
-        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl  pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Applina is the platform that allows health and wellness providers to create, personalize, and deploy AI staff members for their clinic.
-          Our mission is to make AI accessible and practical for every clinic, med spa, therapy office, and wellness center.
+
+        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
+          Top Health AI Studio is an education and research initiative focused on
+          responsible AI in healthcare. We support clinicians, healthcare
+          leaders, engineers, and trainees with structured learning, practical
+          evaluation tools, and applied prototypes that reflect real clinical
+          workflows.
         </p>
-        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl  pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Any provider can create AI staff for intake, scheduling, scribing, follow-up, or customer communication.
-          No technical background is required.
+
+        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
+          Our work bridges the gap between academic concepts and operational
+          realities by offering hands-on programs, guided reviews, and
+          case-based training that emphasize safety, explainability, compliance,
+          and clinical accountability.
         </p>
-        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl  pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Applina supports multi-language capabilities and phone numbers in many countries so providers can care for patients in the way that fits their community.
+
+        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
+          We collaborate across disciplines to advance research-informed
+          implementation, enabling teams to evaluate AI workflow impact, improve
+          adoption readiness, and translate innovation into responsible practice.
         </p>
       </div>
+
       <div className="md:w-1/2 w-full relative flex items-center justify-center gap-x-4 md:pt-0 pt-16">
         <div className="">
           <div
@@ -45,6 +57,7 @@ const About = () => {
               className="h-60 w-auto object-cover object-center"
             />
           </div>
+
           <div
             data-aos="fade-up"
             data-aos-duration="1200"
@@ -59,6 +72,7 @@ const About = () => {
             />
           </div>
         </div>
+
         <div className="">
           <div
             data-aos="fade-down"
@@ -73,6 +87,7 @@ const About = () => {
               className="h-24 w-auto object-cover object-center"
             />
           </div>
+
           <div
             data-aos="fade-up"
             data-aos-duration="1200"
@@ -87,6 +102,7 @@ const About = () => {
             />
           </div>
         </div>
+
         <div className="">
           <div
             data-aos="fade-up"
