@@ -1,19 +1,12 @@
 "use client";
-
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Offers = () => {
   useEffect(() => {
-    // Prevent SSR/window issues in Next.js App Router
     if (typeof window === "undefined") return;
-
-    Aos.init({
-      duration: 1200,
-      once: true,
-      disableMutationObserver: true,
-    });
+    Aos.init({ once: true, disableMutationObserver: true });
   }, []);
 
   return (
@@ -25,10 +18,7 @@ const Offers = () => {
 
       <div className="2xl:w-full max-w-screen-2xl w-[95%] grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 lg:gap-3 items-start justify-center mt-4">
         {/* Offering 1 */}
-        <div
-          data-aos="zoom-in"
-          className="w-56 bg-slate-200 text-white text-center mx-auto"
-        >
+        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto">
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -43,9 +33,7 @@ const Offers = () => {
 
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{
-              background: "linear-gradient(to bottom, #33333399, transparent)",
-            }}
+            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
           />
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
@@ -59,7 +47,6 @@ const Offers = () => {
           </div>
 
           <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -72,10 +59,7 @@ const Offers = () => {
         </div>
 
         {/* Offering 2 */}
-        <div
-          data-aos="zoom-in"
-          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
-        >
+        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -90,9 +74,7 @@ const Offers = () => {
 
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{
-              background: "linear-gradient(to bottom, #33333399, transparent)",
-            }}
+            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
           />
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
@@ -106,7 +88,6 @@ const Offers = () => {
           </div>
 
           <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -119,10 +100,7 @@ const Offers = () => {
         </div>
 
         {/* Offering 3 */}
-        <div
-          data-aos="zoom-in"
-          className="w-56 bg-slate-200 text-white text-center mx-auto"
-        >
+        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto">
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -137,23 +115,19 @@ const Offers = () => {
 
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{
-              background: "linear-gradient(to bottom, #33333399, transparent)",
-            }}
+            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
           />
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
               <h2 className="font-bold text-lg">Workflow Evaluation Frameworks</h2>
               <p className="pt-1 text-sm">
-                Methods to assess clinical risk, operational impact, and implementation readiness
-                across care environments.
+                Methods to assess clinical risk, operational impact, and implementation readiness across care environments.
               </p>
             </div>
           </div>
 
           <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -166,10 +140,7 @@ const Offers = () => {
         </div>
 
         {/* Offering 4 */}
-        <div
-          data-aos="zoom-in"
-          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
-        >
+        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -184,23 +155,19 @@ const Offers = () => {
 
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{
-              background: "linear-gradient(to bottom, #33333399, transparent)",
-            }}
+            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
           />
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
               <h2 className="font-bold text-lg">Research Collaboration</h2>
               <p className="pt-1 text-sm">
-                Partnership pathways for academic teams and institutions to study responsible clinical AI
-                implementation and evaluation.
+                Partnership pathways for academic teams and institutions to study responsible clinical AI implementation and evaluation.
               </p>
             </div>
           </div>
 
           <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -220,7 +187,7 @@ const Offers = () => {
           rel="noopener noreferrer"
           className="bg-orange text-white uppercase text-xs md:text-sm font-bold tracking-wide px-5 sm:px-8 md:px-12 lg:px-16 py-3 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
         >
-          Access Courses <br /> (CME Accreditation in Progress)
+          Access Learning Platform <br /> (CME Accreditation in Progress)
         </a>
 
         <p className="text-brown text-sm md:text-base mt-4 max-w-2xl text-center px-6">
