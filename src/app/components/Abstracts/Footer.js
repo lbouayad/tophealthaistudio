@@ -6,14 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { IoIosMail } from "react-icons/io";
 import { FaFileAlt, FaGlobe, FaLinkedin } from 'react-icons/fa'
 import { MdPrivacyTip } from "react-icons/md";
-import { FaLocationDot, FaSquareFacebook, FaSquareInstagram } from "react-icons/fa6";
-
-const social = [
-  // Update these when Studio profiles are ready (or remove items)
-  { icon: <FaLinkedin className='text-2xl text-brown' />, path: "https://linkedin.com" },
-  { icon: <FaSquareFacebook className='text-2xl text-brown' />, path: "https://facebook.com" },
-  { icon: <FaSquareInstagram className='text-2xl text-brown' />, path: "https://instagram.com" },
-];
+import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -23,10 +16,7 @@ const Footer = () => {
       <ToastContainer />
 
       <div className='xl:px-24 lg:px-8 px-10 flex lg:flex-row flex-col w-full'>
-        {/* Left group */}
         <div className='w-full flex md:flex-row flex-col lg:pl-0 md:pl-10'>
-
-          {/* Courses / Platform */}
           <div className='lg:w-3/5 md:w-1/2 flex flex-col items-start'>
             <ul className="text-sm font-medium space-y-1">
               <h2 className='font-bold text-2xl'>Courses</h2>
@@ -57,17 +47,13 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div className="lg:w-2/5 md:w-1/2 mt-12 lg:mt-0 md:mt-6 xl:pl-10 pl-0">
             <ul className="text-base md:text-lg font-medium space-y-1">
               <h2 className='font-bold text-2xl'>Contact</h2>
 
               <li className='flex items-center gap-x-2 lg:pt-8 pt-4'>
-                <a
-                  className='hover:underline inline-flex items-center gap-x-1'
-                  href="mailto:hello@tophealthaistudio.org"
-                >
-                  <IoIosMail className='text-2xl' /> Dr.Lina@tophealthaistudio.org
+                <a className='hover:underline inline-flex items-center gap-x-1' href={"mailto:dr.lina@tophealthaistudio.org"}>
+                  <IoIosMail className='text-2xl' /> dr.lina@tophealthaistudio.org
                 </a>
               </li>
 
@@ -76,71 +62,37 @@ const Footer = () => {
                   className='hover:underline inline-flex items-center gap-x-1'
                   target='_blank'
                   rel="noopener noreferrer"
-                  href="https://tophealthaistudio.org"
+                  href={"https://tophealthaistudio.org"}
                 >
                   <FaGlobe className='text-xl' />
                   tophealthaistudio.org
                 </a>
               </li>
-
-              <li>
-                <div className='flex items-center gap-x-2 pt-2'>
-                  {social.map((item, index) => (
-                    <a
-                      key={index}
-                      href={item.path}
-                      target='_blank'
-                      rel="noopener noreferrer"
-                      className='hover:underline inline-flex items-center gap-x-1'
-                      aria-label="Social link"
-                    >
-                      {item.icon}
-                    </a>
-                  ))}
-                </div>
-              </li>
             </ul>
           </div>
         </div>
 
-        {/* Right group */}
         <div className='w-full flex md:flex-row flex-col md:pl-10 lg:pl-10 pl-0'>
-          {/* Policies */}
           <div className="lg:w-1/2 md:w-1/2 mt-12 lg:mt-0">
             <ul className="text-base md:text-lg font-medium space-y-1">
               <h2 className='font-bold text-2xl'>About</h2>
 
               <li className='flex items-center gap-x-2 lg:pt-8 pt-4'>
-                <a
-                  className='hover:underline inline-flex items-center gap-x-1'
-                  target='_blank'
-                  rel="noopener noreferrer"
-                  href="https://tophealthaistudio.org/privacy"
-                >
+                <a className='hover:underline inline-flex items-center gap-x-1' target='_blank' rel="noopener noreferrer" href={"https://tophealthaistudio.org/privacy"}>
                   <MdPrivacyTip className='text-2xl' />
                   Privacy Policy
                 </a>
               </li>
 
               <li className='flex items-center gap-x-2 pt-2'>
-                <a
-                  className='hover:underline inline-flex items-center gap-x-1'
-                  target='_blank'
-                  rel="noopener noreferrer"
-                  href="https://tophealthaistudio.org/terms"
-                >
+                <a className='hover:underline inline-flex items-center gap-x-1' target='_blank' rel="noopener noreferrer" href={"https://tophealthaistudio.org/terms"}>
                   <FaFileAlt className='text-2xl' />
                   Terms
                 </a>
               </li>
 
               <li className='flex items-center gap-x-2 pt-2'>
-                <a
-                  className='hover:underline inline-flex items-center gap-x-1'
-                  target='_blank'
-                  rel="noopener noreferrer"
-                  href="https://tophealthaistudio.org/collaborate"
-                >
+                <a className='hover:underline inline-flex items-center gap-x-1' target='_blank' rel="noopener noreferrer" href={"https://tophealthaistudio.org/collaborate"}>
                   <FaLinkedin className='text-2xl' />
                   Collaboration Inquiries
                 </a>
@@ -148,18 +100,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Address */}
           <div className="xl:w-2/3 lg:w-3/4 md:w-2/5 mt-12 lg:mt-0">
             <h2 className='font-bold text-2xl'>Location</h2>
             <div className='md:pt-8 pt-4 font-medium flex items-start gap-x-2'>
               <FaLocationDot className='text-2xl' />
-              <div className="">
-                Tampa, Florida (Administrative)
-              </div>
+              <div className="">Tampa, Florida (Administrative)</div>
             </div>
 
             <p className='text-xs pt-3 text-brown/80 max-w-sm'>
-              Top Health AI Studio is an education and research initiative and is distinct from Top Health AI (clinic solutions) and Top Health AI Foundation (nonprofit).
+              Top Health AI Studio is distinct from Top Health AI LLC (clinical AI solutions) and the Top Health AI Foundation (nonprofit).
             </p>
           </div>
         </div>
