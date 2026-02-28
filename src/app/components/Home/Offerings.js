@@ -1,3 +1,4 @@
+```tsx
 "use client";
 import React, { useEffect } from "react";
 import Aos from "aos";
@@ -15,6 +16,7 @@ const Offers = () => {
       className="w-full items-center justify-center flex flex-col pt-8 pb-24 overflow-hidden relative z-20 bg-offWhite"
     >
       <h1 className="mainHeading text-brown uppercase">Offerings</h1>
+
       <div className="2xl:w-full max-w-screen-2xl w-[95%] grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 lg:gap-3 items-start justify-center mt-4">
         {/* Offering 1 */}
         <div
@@ -41,13 +43,14 @@ const Offers = () => {
           />
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">AI Assistant Builder</h1>
+              <h1 className="font-bold text-lg">Applied Health AI Courses</h1>
               <p className="pt-1 text-sm">
-                Create AI staff for calls, scheduling, intake, scribing, and patient support.
+                Structured learning in clinical AI, workflow evaluation, and implementation rigor.
+                CME accreditation is currently in progress.
               </p>
             </div>
           </div>
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]"></div>
+          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -84,13 +87,14 @@ const Offers = () => {
           />
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">Educational Integration</h1>
+              <h1 className="font-bold text-lg">Prototype-Based Testing</h1>
               <p className="pt-1 text-sm">
-                Use AI tools in classrooms, academic projects, or demonstrations.
+                Guided evaluation of AI behavior in simulated workflows—edge cases,
+                escalation boundaries, and documentation reliability.
               </p>
             </div>
           </div>
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]"></div>
+          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -127,13 +131,14 @@ const Offers = () => {
           />
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">Live AI Reviews</h1>
+              <h1 className="font-bold text-lg">Workflow Evaluation Frameworks</h1>
               <p className="pt-1 text-sm">
-                Share feedback and help refine future templates for other providers.
+                Methods to assess clinical risk, operational impact, and implementation readiness
+                across real care environments.
               </p>
             </div>
           </div>
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]"></div>
+          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -170,13 +175,14 @@ const Offers = () => {
           />
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h1 className="font-bold text-lg">Deployment Tools</h1>
+              <h1 className="font-bold text-lg">Research Collaboration</h1>
               <p className="pt-1 text-sm">
-                Launch AI staff across phone, text, chat, or WhatsApp.
+                Partnership pathways for academic teams and institutions to study responsible clinical
+                AI implementation and evaluation.
               </p>
             </div>
           </div>
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]"></div>
+          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -191,15 +197,21 @@ const Offers = () => {
 
       <div className="flex flex-col items-center justify-center mt-16">
         <Link
-          href="https://calendly.com/d/cq5y-3yd-6gs/join-our-ai-powered-specialist-network"
+          href="https://medaistudio.moodlecloud.com/"
           target="_blank"
           className="bg-orange text-white uppercase text-xs md:text-sm font-bold tracking-wide px-5 sm:px-8 md:px-12 lg:px-16 py-3 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
         >
-          Exclusive Provider Onboarding <br /> Schedule Now
+          Access Courses <br /> (CME Accreditation in Progress)
         </Link>
+
+        <p className="text-brown text-sm md:text-base mt-4 max-w-2xl text-center px-6">
+          Courses are available through our learning platform. Continuing medical education (CME)
+          accreditation is currently in progress.
+        </p>
       </div>
     </div>
   );
 };
 
 export default Offers;
+```
