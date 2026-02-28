@@ -1,9 +1,7 @@
-```tsx
 "use client";
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Link from "next/link";
 
 const Offers = () => {
   useEffect(() => {
@@ -35,12 +33,14 @@ const Offers = () => {
               01
             </div>
           </div>
+
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
             style={{
               background: "linear-gradient(to bottom, #33333399, transparent)",
             }}
           />
+
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
               <h1 className="font-bold text-lg">Applied Health AI Courses</h1>
@@ -50,7 +50,9 @@ const Offers = () => {
               </p>
             </div>
           </div>
+
           <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
+
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -79,12 +81,14 @@ const Offers = () => {
               02
             </div>
           </div>
+
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
             style={{
               background: "linear-gradient(to bottom, #33333399, transparent)",
             }}
           />
+
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
               <h1 className="font-bold text-lg">Prototype-Based Testing</h1>
@@ -94,7 +98,9 @@ const Offers = () => {
               </p>
             </div>
           </div>
+
           <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
+
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -123,12 +129,14 @@ const Offers = () => {
               03
             </div>
           </div>
+
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
             style={{
               background: "linear-gradient(to bottom, #33333399, transparent)",
             }}
           />
+
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
               <h1 className="font-bold text-lg">Workflow Evaluation Frameworks</h1>
@@ -138,7 +146,9 @@ const Offers = () => {
               </p>
             </div>
           </div>
+
           <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
+
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -167,12 +177,14 @@ const Offers = () => {
               04
             </div>
           </div>
+
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
             style={{
               background: "linear-gradient(to bottom, #33333399, transparent)",
             }}
           />
+
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
               <h1 className="font-bold text-lg">Research Collaboration</h1>
@@ -182,7 +194,9 @@ const Offers = () => {
               </p>
             </div>
           </div>
+
           <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
+
           <div
             className="-mt-3 mx-[4.7rem]"
             style={{
@@ -196,13 +210,14 @@ const Offers = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center mt-16">
-        <Link
+        <a
           href="https://medaistudio.moodlecloud.com/"
           target="_blank"
+          rel="noopener noreferrer"
           className="bg-orange text-white uppercase text-xs md:text-sm font-bold tracking-wide px-5 sm:px-8 md:px-12 lg:px-16 py-3 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
         >
           Access Courses <br /> (CME Accreditation in Progress)
-        </Link>
+        </a>
 
         <p className="text-brown text-sm md:text-base mt-4 max-w-2xl text-center px-6">
           Courses are available through our learning platform. Continuing medical education (CME)
@@ -214,4 +229,3 @@ const Offers = () => {
 };
 
 export default Offers;
-```
