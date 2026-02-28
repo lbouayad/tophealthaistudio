@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { FaUserMd, FaChartBar, FaTools, FaCode, FaLightbulb, FaStar, FaRobot, FaSearch } from "react-icons/fa";
+import { FaChartBar, FaTools, FaCode, FaLightbulb, FaStar, FaRobot, FaSearch } from "react-icons/fa";
 import { LuHandshake } from "react-icons/lu";
 
 const ChooseUs = () => {
@@ -15,10 +15,15 @@ const ChooseUs = () => {
     }, []);
 
     return (
-        <div id='choose-us' className='w-full items-center justify-center flex flex-col pt-14 lg:pb-52 pb-20 relative overflow-hidden relative z-10'>
-            <h1 className='mainHeading text-lightBrown uppercase text-center'>Why Choose Applina</h1>
-            <div data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="400"
-                className='relative pt-[11.2rem] w-full max-w-[1525px] hidden lg:flex items-center justify-center z-50'>
+        <div id='choose-us' className='w-full items-center justify-center flex flex-col pt-14 lg:pb-52 pb-20 relative overflow-hidden z-10'>
+            <h1 className='mainHeading text-lightBrown uppercase text-center'>Why Top Health AI Studio</h1>
+
+            <div
+                data-aos="zoom-out"
+                data-aos-duration="1200"
+                data-aos-delay="400"
+                className='relative pt-[11.2rem] w-full max-w-[1525px] hidden lg:flex items-center justify-center z-50'
+            >
                 <div className='w-56 h-56 rounded-full border-[0.3rem] border-lightBrown flex items-center justify-center'>
                     <Image src={"/WhyChooseUs.png"} width={500} height={500} alt='image' className='h-48 w-auto rounded-full' />
                 </div>
@@ -29,7 +34,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaStar className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Made for Health and Wellness</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Responsible by Design</h2>
                     </div>
                     <div className='w-28 border-t-2 border-t-lightBrown absolute rotate-[56deg] top-[6.84rem] left-[15rem] lg:block hidden' />
                 </div>
@@ -40,7 +45,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaRobot className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Build Your Own AI Staff</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Clinically Grounded Prototypes</h2>
                     </div>
                     <div className='w-28 border-t-2 border-t-lightBrown absolute -rotate-[56deg] top-[6.9rem] -left-[2.5rem] lg:block hidden' />
                 </div>
@@ -51,7 +56,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaSearch className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Built on Real Provider Insight</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Structured Evaluation Methods</h2>
                     </div>
                     <div className='w-20 border-t-2 border-t-lightBrown absolute top-[3rem] left-[18.3rem] z-20 lg:block hidden' />
                 </div>
@@ -60,9 +65,9 @@ const ChooseUs = () => {
                 <div className={`relative left-[3rem] -top-[3rem]`}>
                     <div className={`${pillStyle}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
-                            <FaCode className='text-3xl text-brown' />
+                            <FaTools className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>No Code Needed</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Workflow & Safety Focused</h2>
                     </div>
                     <div className='w-20 border-t-2 border-t-lightBrown absolute top-[3rem] -left-[3.68rem] z-20 lg:block hidden' />
                 </div>
@@ -71,9 +76,9 @@ const ChooseUs = () => {
                 <div className={`relative -left-[30.7rem] top-[9rem]`}>
                     <div className={`${pillStyle}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
-                            <FaLightbulb className='text-3xl text-brown' />
+                            <FaChartBar className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Smart Search</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Implementation Readiness</h2>
                     </div>
                     <div className='w-24 border-t-2 border-t-lightBrown absolute -rotate-[56deg] -top-[0.6rem] left-[17rem] z-20 lg:block hidden' />
                 </div>
@@ -84,7 +89,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <LuHandshake className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Ideal for Learning and Professional Development</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Education & Research Collaboration</h2>
                     </div>
                     <div className='w-24 border-t-2 border-t-lightBrown absolute rotate-[56deg] -top-[1rem] -left-[2.4rem] z-20 lg:block hidden' />
                 </div>
@@ -98,7 +103,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaStar className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Made for Health and Wellness</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Responsible by Design</h2>
                     </div>
                 </div>
 
@@ -108,7 +113,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaRobot className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Build Your Own AI Staff</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Clinically Grounded Prototypes</h2>
                     </div>
                 </div>
 
@@ -118,7 +123,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaSearch className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Built on Real Provider Insight</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Structured Evaluation Methods</h2>
                     </div>
                 </div>
 
@@ -130,9 +135,9 @@ const ChooseUs = () => {
                 <div className={`relative`}>
                     <div className={`${pillStyleSmall}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
-                            <FaCode className='text-3xl text-brown' />
+                            <FaTools className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>No Code Needed</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Workflow & Safety Focused</h2>
                     </div>
                 </div>
 
@@ -140,9 +145,9 @@ const ChooseUs = () => {
                 <div className={`relative`}>
                     <div className={`${pillStyleSmall}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
-                            <FaLightbulb className='text-3xl text-brown' />
+                            <FaChartBar className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Smart Search</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Implementation Readiness</h2>
                     </div>
                 </div>
 
@@ -152,7 +157,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <LuHandshake className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Ideal for Learning and Professional Development</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Education & Research Collaboration</h2>
                     </div>
                 </div>
             </div>
