@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { IoIosMail } from "react-icons/io";
@@ -9,94 +8,180 @@ import { FaFileAlt, FaGlobe, FaLinkedin } from 'react-icons/fa'
 import { MdPrivacyTip } from "react-icons/md";
 import { FaLocationDot, FaSquareFacebook, FaSquareInstagram } from "react-icons/fa6";
 
-const data = [
-    { icon: <FaSquareFacebook className='text-2xl text-brown' />, path: "http://facebook.com/tophealthai" },
-    { icon: <FaLinkedin className='text-2xl text-brown' />, path: "http://linkedin.com/company/tophealthai" },
-    { icon: <FaSquareInstagram className='text-2xl text-brown' />, path: "http://instagram.com/tophealthai" },
-]
+const social = [
+  // Update these when Studio profiles are ready (or remove items)
+  { icon: <FaLinkedin className='text-2xl text-brown' />, path: "https://linkedin.com" },
+  { icon: <FaSquareFacebook className='text-2xl text-brown' />, path: "https://facebook.com" },
+  { icon: <FaSquareInstagram className='text-2xl text-brown' />, path: "https://instagram.com" },
+];
 
 const Footer = () => {
+  const year = new Date().getFullYear();
 
-    return (
-        <div className='bg-offWhite w-full flex flex-col items-center justify-center text-brown md:pt-16 pt-6 pb-6 relative z-20'>
-            <ToastContainer />
-            <div className='xl:px-24 lg:px-8 px-10 flex lg:flex-row flex-col w-full'>
+  return (
+    <div className='bg-offWhite w-full flex flex-col items-center justify-center text-brown md:pt-16 pt-6 pb-6 relative z-20'>
+      <ToastContainer />
 
-                <div className='w-full flex md:flex-row flex-col lg:pl-0 md:pl-10'>
-                    <div className='lg:w-3/5 md:w-1/2 flex flex-col items-start'>
-                        <ul className="text-sm font-medium space-y-1">
-                            <h2 className='font-bold text-2xl'>Download App</h2>
-                            <div className="">
-                                <Image src={"/google-icon-andriod.svg"} width={200} height={200} alt='image' className='h-20 w-auto object-cover object-center' />
-                            </div>
-                        </ul>
-                    </div>
+      <div className='xl:px-24 lg:px-8 px-10 flex lg:flex-row flex-col w-full'>
+        {/* Left group */}
+        <div className='w-full flex md:flex-row flex-col lg:pl-0 md:pl-10'>
 
-                    <div className="lg:w-2/5 md:w-1/2 mt-12 lg:mt-0 md:mt-6 xl:pl-10 pl-0">
-                        <ul className="text-base md:text-lg font-medium space-y-1">
-                            <h2 className='font-bold text-2xl'>Contact</h2>
-                            <li className='flex items-center gap-x-2 lg:pt-8 pt-4'>
-                                <Link className='hover:underline inline-flex items-center gap-x-1' href={"mailto:"}>
-                                    <IoIosMail className='text-2xl' /> Top Health AI
-                                </Link>
-                            </li>
-                            <li className='flex items-center gap-x-2 pt-2'>
-                                <Link className='hover:underline inline-flex items-center gap-x-1' target='_blank' href={"https://www.tophealth.ai"}>
-                                    <FaGlobe className='text-xl' />
-                                    www.tophealth.ai
-                                </Link>
-                            </li>
-                            <li>
-                                <div className='flex items-center gap-x-2 pt-2'>
-                                    {data.map((item, index) => {
-                                        return (
-                                            <Link key={index} href={item.path} target='_blank' className='hover:underline inline-flex items-center gap-x-1'>
-                                                {item.icon}
-                                            </Link>
-                                        )
-                                    })}
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+          {/* Courses / Platform */}
+          <div className='lg:w-3/5 md:w-1/2 flex flex-col items-start'>
+            <ul className="text-sm font-medium space-y-1">
+              <h2 className='font-bold text-2xl'>Courses</h2>
+
+              <p className='text-sm pt-3 max-w-sm'>
+                Access applied health AI coursework and prototype-based exercises through our learning platform.
+              </p>
+
+              <a
+                href="https://medaistudio.moodlecloud.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className='inline-flex items-center gap-x-2 pt-4 hover:underline'
+              >
+                <Image
+                  src={"/google-icon-andriod.svg"}
+                  width={200}
+                  height={200}
+                  alt='Learning platform'
+                  className='h-16 w-auto object-cover object-center'
+                />
+                <span className='text-brown font-semibold'>Open Learning Platform</span>
+              </a>
+
+              <p className='text-xs pt-2 text-brown/80'>
+                CME accreditation is currently in progress.
+              </p>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div className="lg:w-2/5 md:w-1/2 mt-12 lg:mt-0 md:mt-6 xl:pl-10 pl-0">
+            <ul className="text-base md:text-lg font-medium space-y-1">
+              <h2 className='font-bold text-2xl'>Contact</h2>
+
+              <li className='flex items-center gap-x-2 lg:pt-8 pt-4'>
+                <a
+                  className='hover:underline inline-flex items-center gap-x-1'
+                  href="mailto:hello@tophealthaistudio.org"
+                >
+                  <IoIosMail className='text-2xl' /> hello@tophealthaistudio.org
+                </a>
+              </li>
+
+              <li className='flex items-center gap-x-2 pt-2'>
+                <a
+                  className='hover:underline inline-flex items-center gap-x-1'
+                  target='_blank'
+                  rel="noopener noreferrer"
+                  href="https://tophealthaistudio.org"
+                >
+                  <FaGlobe className='text-xl' />
+                  tophealthaistudio.org
+                </a>
+              </li>
+
+              <li>
+                <div className='flex items-center gap-x-2 pt-2'>
+                  {social.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.path}
+                      target='_blank'
+                      rel="noopener noreferrer"
+                      className='hover:underline inline-flex items-center gap-x-1'
+                      aria-label="Social link"
+                    >
+                      {item.icon}
+                    </a>
+                  ))}
                 </div>
-
-                <div className='w-full flex md:flex-row flex-col md:pl-10 lg:pl-10 pl-0'>
-                    <div className="lg:w-1/2 md:w-1/2 mt-12 lg:mt-0">
-                        <ul className="text-base md:text-lg font-medium space-y-1">
-                            <h2 className='font-bold text-2xl'>About Us</h2>
-                            <li className='flex items-center gap-x-2 lg:pt-8 pt-4'>
-                                <Link className='hover:underline inline-flex items-center gap-x-1' target='_blank' href={"https://www.tophealth.ai/privacy"}>
-                                    <MdPrivacyTip className='text-2xl' />
-                                    Privacy Policy
-                                </Link>
-                            </li>
-                            <li className='flex items-center gap-x-2 pt-2'>
-                                <Link className='hover:underline inline-flex items-center gap-x-1' target='_blank' href={"https://www.tophealth.ai/terms-and-conditions"}>
-                                    <FaFileAlt className='text-2xl' />
-                                    Terms and Conditions
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="xl:w-2/3 lg:w-3/4 md:w-2/5 mt-12 lg:mt-0">
-                        <h2 className='font-bold text-2xl'>Address</h2>
-                        <div className='md:pt-8 pt-4 font-medium flex items-start gap-x-2'>
-                            <FaLocationDot className='text-2xl' />
-                            <div className="">371 Channelside Walkway, Tampa, FL, 33602</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className='w-full px-10 mt-10 flex items-center justify-center lg:flex-row flex-col'>
-                <div className='mt-8 lg:mt-0 text-center'>
-                    <p>Copyright © {new Date().getFullYear()} All Rights Reserved by <a target='_blank' href="https://tophealth.ai">Top Health AI</a></p>
-                </div>
-            </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    )
+
+        {/* Right group */}
+        <div className='w-full flex md:flex-row flex-col md:pl-10 lg:pl-10 pl-0'>
+          {/* Policies */}
+          <div className="lg:w-1/2 md:w-1/2 mt-12 lg:mt-0">
+            <ul className="text-base md:text-lg font-medium space-y-1">
+              <h2 className='font-bold text-2xl'>About</h2>
+
+              <li className='flex items-center gap-x-2 lg:pt-8 pt-4'>
+                <a
+                  className='hover:underline inline-flex items-center gap-x-1'
+                  target='_blank'
+                  rel="noopener noreferrer"
+                  href="https://tophealthaistudio.org/privacy"
+                >
+                  <MdPrivacyTip className='text-2xl' />
+                  Privacy Policy
+                </a>
+              </li>
+
+              <li className='flex items-center gap-x-2 pt-2'>
+                <a
+                  className='hover:underline inline-flex items-center gap-x-1'
+                  target='_blank'
+                  rel="noopener noreferrer"
+                  href="https://tophealthaistudio.org/terms"
+                >
+                  <FaFileAlt className='text-2xl' />
+                  Terms
+                </a>
+              </li>
+
+              <li className='flex items-center gap-x-2 pt-2'>
+                <a
+                  className='hover:underline inline-flex items-center gap-x-1'
+                  target='_blank'
+                  rel="noopener noreferrer"
+                  href="https://tophealthaistudio.org/collaborate"
+                >
+                  <FaLinkedin className='text-2xl' />
+                  Collaboration Inquiries
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Address */}
+          <div className="xl:w-2/3 lg:w-3/4 md:w-2/5 mt-12 lg:mt-0">
+            <h2 className='font-bold text-2xl'>Location</h2>
+            <div className='md:pt-8 pt-4 font-medium flex items-start gap-x-2'>
+              <FaLocationDot className='text-2xl' />
+              <div className="">
+                Tampa, Florida (Administrative)
+              </div>
+            </div>
+
+            <p className='text-xs pt-3 text-brown/80 max-w-sm'>
+              Top Health AI Studio is an education and research initiative and is distinct from Top Health AI (clinic solutions) and Top Health AI Foundation (nonprofit).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className='w-full px-10 mt-10 flex items-center justify-center lg:flex-row flex-col'>
+        <div className='mt-8 lg:mt-0 text-center'>
+          <p className='text-sm md:text-base'>
+            Copyright © {year} All Rights Reserved by{" "}
+            <a
+              target='_blank'
+              rel="noopener noreferrer"
+              href="https://tophealthaistudio.org"
+              className='hover:underline font-semibold'
+            >
+              Top Health AI Studio
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Footer
