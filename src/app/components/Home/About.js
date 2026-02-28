@@ -21,24 +21,29 @@ const About = () => {
         </h1>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Top Health AI Studio is an education and research initiative focused on
-          responsible AI in healthcare. We support clinicians, healthcare
-          leaders, engineers, and trainees with structured learning, practical
-          evaluation tools, and applied prototypes that reflect real clinical
-          workflows.
+          Top Health AI Studio is an independent education and research
+          initiative advancing responsible artificial intelligence
+          implementation in clinical care.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Our work bridges the gap between academic concepts and operational
-          realities by offering hands-on programs, guided reviews, and
-          case-based training that emphasize safety, explainability, compliance,
-          and clinical accountability.
+          We develop and teach structured methods to evaluate AI systems in
+          real-world healthcare environments—emphasizing clinical accountability,
+          workflow integrity, explainability, and implementation feasibility.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          We collaborate across disciplines to advance research-informed
-          implementation, enabling teams to evaluate AI workflow impact, improve
-          adoption readiness, and translate innovation into responsible practice.
+          Through CME-accredited programs, prototype-based testing, and
+          interdisciplinary collaboration across medicine, engineering, and
+          policy, we support clinicians, researchers, and institutions in
+          translating innovation into evidence-aligned, operationally sound, and
+          ethically deployed practice.
+        </p>
+
+        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
+          Top Health AI Studio is distinct from Top Health AI LLC (clinical AI
+          solutions) and the Top Health AI Foundation (nonprofit), maintaining a
+          clear academic and research-focused mission.
         </p>
       </div>
 
@@ -118,6 +123,11 @@ const About = () => {
             />
           </div>
         </div>
+
+        {/* Optional decorative SVG if you want it layered behind the image cluster */}
+        {/* <div className="absolute -z-10 right-0 top-1/2 -translate-y-1/2 opacity-80">
+          <BubblesVector />
+        </div> */}
       </div>
     </div>
   );
