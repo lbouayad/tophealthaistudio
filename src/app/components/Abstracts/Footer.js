@@ -67,7 +67,7 @@ const Footer = () => {
                   className='hover:underline inline-flex items-center gap-x-1'
                   href="mailto:hello@tophealthaistudio.org"
                 >
-                  <IoIosMail className='text-2xl' /> hello@tophealthaistudio.org
+                  <IoIosMail className='text-2xl' /> Dr.Lina@tophealthaistudio.org
                 </a>
               </li>
 
