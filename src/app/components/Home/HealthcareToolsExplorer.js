@@ -9,22 +9,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import {
-  Star,
-  Github,
-  Calendar,
-  FileText,
-  Users,
-  Bell,
-  Brain,
-  Stethoscope,
-  ClipboardList,
-  MessageSquare,
-  PlayCircle,
-} from "lucide-react";
+import { Github, PlayCircle, Brain, Users, Bell, FileText, ClipboardList } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-// JSON data for healthcare AI tools
+// NOTE: Prototype library entries are for educational/testing purposes.
+// Avoid “Featured/Reviews” claims unless you have auditable real data.
 const healthcareTools = [
   {
     id: 1,
@@ -34,11 +23,8 @@ const healthcareTools = [
     specialty: "Reception",
     outcome: "Primary Care and Med Spa",
     attributes: ["Reception", "Communication"],
-    rating: 4,
-    reviews: 42,
     githubUrl: "#",
     demoUrl: "#",
-    featured: true,
     compliance: "HIPAA-safe",
   },
   {
@@ -49,11 +35,8 @@ const healthcareTools = [
     specialty: "Intake",
     outcome: "Surgery and Wellness",
     attributes: ["Intake", "Surgery"],
-    rating: 4,
-    reviews: 28,
     githubUrl: "#",
     demoUrl: "#",
-    featured: true,
     compliance: "HIPAA-safe",
   },
   {
@@ -64,11 +47,8 @@ const healthcareTools = [
     specialty: "Triage",
     outcome: "Pain Management and Physical Therapy",
     attributes: ["Triage", "Pain Management"],
-    rating: 4,
-    reviews: 35,
     githubUrl: "#",
     demoUrl: "#",
-    featured: true,
     compliance: "HIPAA-safe",
   },
   {
@@ -79,38 +59,25 @@ const healthcareTools = [
     specialty: "Scribing",
     outcome: "Primary Care and Therapy",
     attributes: ["Scribing", "Primary Care"],
-    rating: 4,
-    reviews: 31,
     githubUrl: "#",
     demoUrl: "#",
-    featured: true,
     compliance: "HIPAA-safe",
   },
   {
     id: 5,
     title: "Follow Up and Recall Assistant",
-    description: "Improves patient retention",
+    description: "Improves continuity and recall workflows",
     icon: Bell,
     specialty: "Follow Up",
     outcome: "Psychiatry and Wellness",
     attributes: ["Follow-ups", "Psychiatry"],
-    rating: 3,
-    reviews: 18,
     githubUrl: "#",
     demoUrl: "#",
-    featured: true,
     compliance: "HIPAA-safe",
   },
 ];
 
-const specialties = [
-  "All",
-  "Reception",
-  "Intake",
-  "Triage",
-  "Scribing",
-  "Follow Up",
-];
+const specialties = ["All", "Reception", "Intake", "Triage", "Scribing", "Follow Up"];
 const outcomes = [
   "All",
   "Primary Care and Med Spa",
@@ -132,13 +99,15 @@ const attributes = [
   "Follow-ups",
   "Psychiatry",
 ];
-const sortOptions = ["Recommended", "Rating", "Reviews", "Name"];
+
+// Rename sort options to avoid “Recommended” endorsement language
+const sortOptions = ["Default", "Name"];
 
 export function HealthcareToolsExplorer() {
   const [specialtyFilter, setSpecialtyFilter] = useState("All");
   const [outcomeFilter, setOutcomeFilter] = useState("All");
   const [attributeFilter, setAttributeFilter] = useState("All");
-  const [sortBy, setSortBy] = useState("Recommended");
+  const [sortBy, setSortBy] = useState("Default");
 
   const filteredAndSortedTools = useMemo(() => {
     let filtered = healthcareTools.filter((tool) => {
@@ -153,41 +122,28 @@ export function HealthcareToolsExplorer() {
       return matchesSpecialty && matchesOutcome && matchesAttribute;
     });
 
-    // Sort the filtered results
+    // Keep sorting neutral unless you have a real ranking method
     switch (sortBy) {
-      case "Rating":
-        return filtered.sort((a, b) => b.rating - a.rating);
-      case "Reviews":
-        return filtered.sort((a, b) => b.reviews - a.reviews);
       case "Name":
         return filtered.sort((a, b) => a.title.localeCompare(b.title));
-      case "Recommended":
+      case "Default":
       default:
-        return filtered.sort((a, b) => {
-          if (a.featured && !b.featured) return -1;
-          if (!a.featured && b.featured) return 1;
-          return b.rating - a.rating;
-        });
+        return filtered;
     }
   }, [specialtyFilter, outcomeFilter, attributeFilter, sortBy]);
-
-  const renderStars = (rating) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <Star
-        key={i}
-        className={`h-4 w-4`}
-        fill={i < rating ? "#facc15" : "none"}
-      />
-    ));
-  };
 
   return (
     <div className="bg-offWhite">
       {/* Main Content */}
       <div className="xl:px-32 lg:px-16 px-8 py-12">
-        <h2 className="text-3xl font-bold mb-8 text-foreground">
-          Explore Health and Wellness AI Assistants
+        <h2 className="text-3xl font-bold mb-2 text-foreground">
+          Prototype Library (Educational &amp; Evaluation Use)
         </h2>
+
+        <p className="text-muted-foreground mb-8 max-w-4xl">
+          These prototypes support structured testing, coursework, and workflow evaluation.
+          They are not clinical devices and are not intended to replace professional judgment.
+        </p>
 
         {/* Filters */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-8">
@@ -196,10 +152,7 @@ export function HealthcareToolsExplorer() {
               <label className="text-sm font-medium text-muted-foreground mb-2 block">
                 Specialty
               </label>
-              <Select
-                value={specialtyFilter}
-                onValueChange={setSpecialtyFilter}
-              >
+              <Select value={specialtyFilter} onValueChange={setSpecialtyFilter}>
                 <SelectTrigger className="bg-card">
                   <SelectValue />
                 </SelectTrigger>
@@ -235,10 +188,7 @@ export function HealthcareToolsExplorer() {
               <label className="text-sm font-medium text-muted-foreground mb-2 block">
                 Attributes
               </label>
-              <Select
-                value={attributeFilter}
-                onValueChange={setAttributeFilter}
-              >
+              <Select value={attributeFilter} onValueChange={setAttributeFilter}>
                 <SelectTrigger className="bg-card">
                   <SelectValue />
                 </SelectTrigger>
@@ -270,6 +220,7 @@ export function HealthcareToolsExplorer() {
               </Select>
             </div>
           </div>
+
           <Button
             variant="outline"
             size="sm"
@@ -278,7 +229,7 @@ export function HealthcareToolsExplorer() {
               setSpecialtyFilter("All");
               setOutcomeFilter("All");
               setAttributeFilter("All");
-              setSortBy("Recommended");
+              setSortBy("Default");
             }}
           >
             Reset Filters
@@ -299,37 +250,31 @@ export function HealthcareToolsExplorer() {
                     <div className="p-3 rounded-lg bg-brown shrink-0">
                       <IconComponent className="h-6 w-6 text-lightBrown" />
                     </div>
+
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-2">
+                      <div className="flex items-center gap-2 mb-2 flex-wrap">
                         <h3 className="font-semibold text-lg text-foreground">
                           {tool.title}
                         </h3>
-                        {tool.featured && (
-                          <Badge variant="secondary" className="text-xs">
-                            Featured
+                        <Badge variant="secondary" className="text-xs">
+                          Prototype
+                        </Badge>
+                        {tool.compliance && (
+                          <Badge variant="outline" className="text-xs">
+                            {tool.compliance}
                           </Badge>
                         )}
                       </div>
+
                       <p className="text-muted-foreground mb-4">
-                        {tool.description && tool.description.length > 100
-                          ? tool.description.slice(0, 100) + "..."
+                        {tool.description && tool.description.length > 140
+                          ? tool.description.slice(0, 140) + "..."
                           : tool.description}
                       </p>
 
-                      <div className="flex items-center gap-2 mb-4">
-                        <div className="flex">{renderStars(tool.rating)}</div>
-                        <span className="text-sm text-muted-foreground">
-                          ({tool.reviews} reviews)
-                        </span>
-                      </div>
-
                       <div className="flex flex-wrap gap-1 mb-4">
                         {tool.attributes.map((attr) => (
-                          <Badge
-                            key={attr}
-                            variant="outline"
-                            className="text-xs"
-                          >
+                          <Badge key={attr} variant="outline" className="text-xs">
                             {attr}
                           </Badge>
                         ))}
@@ -345,14 +290,13 @@ export function HealthcareToolsExplorer() {
                           <Github className="h-4 w-4 mr-2" />
                           Build
                         </Button>
+
                         <Button
                           variant="outline"
                           size="sm"
                           className="w-full"
-                          onClick={() =>
-                            window.open(tool.demoUrl || "#", "_blank")
-                          }
-                          disabled={!tool.demoUrl}
+                          onClick={() => window.open(tool.demoUrl || "#", "_blank")}
+                          disabled={!tool.demoUrl || tool.demoUrl === "#"}
                         >
                           <PlayCircle className="h-4 w-4 mr-2" />
                           Preview
@@ -370,8 +314,7 @@ export function HealthcareToolsExplorer() {
         {filteredAndSortedTools.length === 0 && (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
-              No tools found matching your filters. Try adjusting your search
-              criteria.
+              No prototypes found matching your filters. Try adjusting your criteria.
             </p>
           </div>
         )}
