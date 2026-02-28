@@ -2,19 +2,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
 
-/**
- * NOTE:
- * The original stats read like product/marketing claims.
- * For Top Health AI Studio (education + research), we keep the same structure
- * but shift to academically appropriate, non-misleading metrics.
- *
- * Replace the numeric values below with your real counts whenever ready.
- */
 const Stats = () => {
-  const statsRef = useRef<HTMLDivElement | null>(null);
+  const statsRef = useRef(null);
   const [statsInView, setStatsInView] = useState(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0]?.isIntersecting) {
@@ -34,7 +28,7 @@ const Stats = () => {
     <div
       ref={statsRef}
       className="bg-lightBrown w-full items-center relative justify-center flex flex-col text-brown lg:px-0 md:px-6 px-8 
-            overflow-hidden text-center z-10 md:py-24 py-16"
+      overflow-hidden text-center z-10 md:py-24 py-16"
     >
       <h1 className="text-brown z-10 font-bold text-3xl text-center mb-16">
         Top Health AI Studio — Program Snapshot
@@ -43,7 +37,6 @@ const Stats = () => {
       <div className="lg:w-4/5 flex flex-wrap justify-center z-20 gap-y-10">
         {statsInView && (
           <>
-            {/* 1st */}
             <div className="lg:px-10 md:px-8 sm:px-6 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center">
               <div className="lg:text-3xl text-2xl font-extrabold mb-3">
                 <CountUp start={0} end={12} duration={5} />+
@@ -53,7 +46,6 @@ const Stats = () => {
               </div>
             </div>
 
-            {/* 2nd */}
             <div className="lg:px-10 md:px-8 sm:px-6 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center">
               <div className="lg:text-3xl text-2xl font-extrabold mb-3">
                 <CountUp start={0} end={25} duration={5} />+
@@ -63,7 +55,6 @@ const Stats = () => {
               </div>
             </div>
 
-            {/* 3rd */}
             <div className="lg:px-10 md:px-8 sm:px-6 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center">
               <div className="lg:text-3xl text-2xl font-extrabold mb-3">
                 <CountUp start={0} end={6} duration={5} />+
@@ -73,7 +64,6 @@ const Stats = () => {
               </div>
             </div>
 
-            {/* 4th */}
             <div className="lg:px-10 md:px-8 sm:px-6 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center">
               <div className="lg:text-3xl text-2xl font-extrabold mb-3">
                 <CountUp start={0} end={10} duration={5} />+
@@ -83,7 +73,6 @@ const Stats = () => {
               </div>
             </div>
 
-            {/* 5th */}
             <div className="lg:px-10 md:px-8 sm:px-6 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center">
               <div className="lg:text-3xl text-2xl font-extrabold mb-3">
                 <CountUp start={0} end={3} duration={5} />
@@ -93,7 +82,6 @@ const Stats = () => {
               </div>
             </div>
 
-            {/* 6th */}
             <div className="lg:px-10 md:px-8 sm:px-6 w-full sm:w-1/2 lg:w-1/3 flex flex-col items-center">
               <div className="lg:text-3xl text-2xl font-extrabold mb-3">
                 <CountUp start={0} end={0} duration={2} />
@@ -103,18 +91,16 @@ const Stats = () => {
               </div>
             </div>
 
-            {/* Optional footnote for academic accuracy */}
             <div className="w-full pt-10 px-4">
               <p className="text-brown/80 text-sm md:text-base max-w-3xl mx-auto">
-                Figures represent current program development and may evolve as courses expand and
-                research collaborations mature. CME accreditation is currently in progress.
+                Figures reflect current program development and may evolve as courses expand and research
+                collaborations mature. CME accreditation is currently in progress.
               </p>
             </div>
           </>
         )}
       </div>
 
-      {/* Medium */}
       <div className="absolute right-0 lg:block hidden triangle-right bottom-0" />
       <div className="absolute bottom-0 left-0 lg:block hidden triangle-left" />
     </div>
