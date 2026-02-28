@@ -12,7 +12,6 @@ const Header = () => {
 
   // Define navigation links directly in the component
   const navLinks = [
-    { name: "For Providers", path: "#home" },
     { name: "About Us", path: "#about-us" },
     { name: "Enrollment", path: "#enrollment" },
     { name: "Choose Us", path: "#choose-us" },
@@ -48,7 +47,7 @@ const Header = () => {
   return (
     <div className="flex w-full items-center justify-center">
       <nav className="w-[90%] rounded-[20px] absolute md:h-24 h-20 flex flex-row bg-[#c06f33] text-white items-center justify-between mt-10 px-6 md:pl-12 md:pr-20 top-0 z-50">
-        <Link href="https://www.tophealth.ai" target="_blank" className="flex justify-center items-center gap-1 sm:gap-2" >
+        <Link href="https://www.tophealthaistudio.org" target="_blank" className="flex justify-center items-center gap-1 sm:gap-2" >
           <Image src="/Wordmark.png" width={1000} height={1000} className="h-7 sm:h-10 md:h-16 w-auto" alt="Logo" />
           <span className="text-2xl sm:text-4xl md:text-6xl text-[#FEF9F6] opacity-90">Studio</span>
         </Link>
