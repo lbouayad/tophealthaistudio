@@ -47,7 +47,14 @@ const Header = () => {
     <div className="flex w-full items-center justify-center">
       <nav className="w-[90%] rounded-[20px] absolute md:h-28 h-24 flex flex-row bg-[#c06f33] text-white items-center justify-between mt-10 px-6 md:pl-12 md:pr-20 top-0 z-50">
         <Link href="/" className="flex justify-center items-center flex-1 xl:flex-none pr-4">
-          <Image src="/ApplinaWordmark.png" width={1400} height={300} className="h-10 sm:h-14 md:h-20 lg:h-24 w-auto" alt="Applina logo" priority />
+          <Image
+            src="/ApplinaWordmark.png"
+            width={2000}
+            height={400}
+            className="h-14 sm:h-20 md:h-28 lg:h-32 xl:h-36 w-auto"
+            alt="Applina logo"
+            priority
+          />
         </Link>
 
         <div className="flex justify-end xl:hidden" onClick={toggleMenu}>
