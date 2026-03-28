@@ -1,323 +1,269 @@
 "use client";
-import { useState, useMemo } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-import { Github, PlayCircle, Brain, Users, Bell, FileText, ClipboardList } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 
-// NOTE: Prototype library entries are for educational/testing purposes.
-// Avoid “Featured/Reviews” claims unless you have auditable real data.
-const healthcareTools = [
+import React, { useMemo, useState } from "react";
+
+const prototypeCases = [
   {
     id: 1,
-    title: "AI Receptionist Lite",
-    description: "Supports patient communication and intake",
-    icon: Users,
-    specialty: "Reception",
-    outcome: "Primary Care and Med Spa",
-    attributes: ["Reception", "Communication"],
-    githubUrl: "#",
-    demoUrl: "#",
-    compliance: "HIPAA-safe",
+    title: "Patient Communication Scenario",
+    badge: "Case study",
+    secondaryBadge: "Used in coursework",
+    description:
+      "Examines how AI handles patient-facing communication, response style, escalation cues, and contextual appropriateness in realistic scenarios.",
+    specialty: "Communication",
+    outcome: "Engagement",
+    attributes: ["Education", "Evaluation"],
   },
   {
     id: 2,
-    title: "Pre Op and Intake Assistant",
-    description: "Improves preparation and intake quality",
-    icon: ClipboardList,
-    specialty: "Intake",
-    outcome: "Surgery and Wellness",
-    attributes: ["Intake", "Surgery"],
-    githubUrl: "#",
-    demoUrl: "#",
-    compliance: "HIPAA-safe",
+    title: "Pre-Procedure Readiness Scenario",
+    badge: "Case study",
+    secondaryBadge: "Used in coursework",
+    description:
+      "Explores how AI supports readiness checks, preparation instructions, and completeness assessment before time or resources are committed.",
+    specialty: "Preparation",
+    outcome: "Readiness",
+    attributes: ["Education", "Evaluation"],
   },
   {
     id: 3,
-    title: "Pain Pattern Triage Assistant",
-    description: "Improves clinical routing",
-    icon: Brain,
-    specialty: "Triage",
-    outcome: "Pain Management and Physical Therapy",
-    attributes: ["Triage", "Pain Management"],
-    githubUrl: "#",
-    demoUrl: "#",
-    compliance: "HIPAA-safe",
+    title: "Symptom Pattern Interpretation Scenario",
+    badge: "Case study",
+    secondaryBadge: "Used in coursework",
+    description:
+      "Used to study how AI structures inputs, identifies patterns, and communicates uncertainty when scenarios involve symptom variation and ambiguity.",
+    specialty: "Interpretation",
+    outcome: "Relevance",
+    attributes: ["Education", "Evaluation"],
   },
   {
     id: 4,
-    title: "Auto Scribe Lite",
-    description: "Reduces charting burden",
-    icon: FileText,
-    specialty: "Scribing",
-    outcome: "Primary Care and Therapy",
-    attributes: ["Scribing", "Primary Care"],
-    githubUrl: "#",
-    demoUrl: "#",
-    compliance: "HIPAA-safe",
+    title: "Clinical Documentation Scenario",
+    badge: "Case study",
+    secondaryBadge: "Used in coursework",
+    description:
+      "Assesses how AI organizes documentation-style outputs, preserves fidelity to source information, and avoids overreach in realistic use cases.",
+    specialty: "Documentation",
+    outcome: "Quality",
+    attributes: ["Education", "Evaluation"],
   },
   {
     id: 5,
-    title: "Follow Up and Recall Assistant",
-    description: "Improves continuity and recall workflows",
-    icon: Bell,
-    specialty: "Follow Up",
-    outcome: "Psychiatry and Wellness",
-    attributes: ["Follow-ups", "Psychiatry"],
-    githubUrl: "#",
-    demoUrl: "#",
-    compliance: "HIPAA-safe",
+    title: "Continuity & Follow-Up Scenario",
+    badge: "Case study",
+    secondaryBadge: "Used in coursework",
+    description:
+      "Examines how AI supports continuity, follow-up communication, and workflow handoffs while maintaining clarity, restraint, and usefulness.",
+    specialty: "Continuity",
+    outcome: "Retention",
+    attributes: ["Education", "Evaluation"],
   },
 ];
 
-const specialties = ["All", "Reception", "Intake", "Triage", "Scribing", "Follow Up"];
-const outcomes = [
-  "All",
-  "Primary Care and Med Spa",
-  "Surgery and Wellness",
-  "Pain Management and Physical Therapy",
-  "Primary Care and Therapy",
-  "Psychiatry and Wellness",
-];
-const attributes = [
-  "All",
-  "Reception",
-  "Communication",
-  "Intake",
-  "Surgery",
-  "Triage",
-  "Pain Management",
-  "Scribing",
-  "Primary Care",
-  "Follow-ups",
-  "Psychiatry",
-];
+const uniqueValues = (items, key) => {
+  const values = new Set();
+  items.forEach((item) => {
+    if (Array.isArray(item[key])) {
+      item[key].forEach((v) => values.add(v));
+    } else {
+      values.add(item[key]);
+    }
+  });
+  return ["All", ...Array.from(values)];
+};
 
-// Rename sort options to avoid “Recommended” endorsement language
-const sortOptions = ["Default", "Name"];
-
-export function HealthcareToolsExplorer() {
-  const [specialtyFilter, setSpecialtyFilter] = useState("All");
-  const [outcomeFilter, setOutcomeFilter] = useState("All");
-  const [attributeFilter, setAttributeFilter] = useState("All");
+const HealthcareToolsExplorer = () => {
+  const [specialty, setSpecialty] = useState("All");
+  const [outcome, setOutcome] = useState("All");
+  const [attribute, setAttribute] = useState("All");
   const [sortBy, setSortBy] = useState("Default");
 
-  const filteredAndSortedTools = useMemo(() => {
-    let filtered = healthcareTools.filter((tool) => {
-      const matchesSpecialty =
-        specialtyFilter === "All" || tool.specialty === specialtyFilter;
-      const matchesOutcome =
-        outcomeFilter === "All" || tool.outcome === outcomeFilter;
-      const matchesAttribute =
-        attributeFilter === "All" ||
-        tool.attributes.some((attr) => attr === attributeFilter);
+  const specialties = useMemo(
+    () => uniqueValues(prototypeCases, "specialty"),
+    []
+  );
+  const outcomes = useMemo(() => uniqueValues(prototypeCases, "outcome"), []);
+  const attributes = useMemo(
+    () => uniqueValues(prototypeCases, "attributes"),
+    []
+  );
 
-      return matchesSpecialty && matchesOutcome && matchesAttribute;
-    });
+  const filteredCases = useMemo(() => {
+    let results = [...prototypeCases];
 
-    // Keep sorting neutral unless you have a real ranking method
-    switch (sortBy) {
-      case "Name":
-        return filtered.sort((a, b) => a.title.localeCompare(b.title));
-      case "Default":
-      default:
-        return filtered;
+    if (specialty !== "All") {
+      results = results.filter((item) => item.specialty === specialty);
     }
-  }, [specialtyFilter, outcomeFilter, attributeFilter, sortBy]);
+
+    if (outcome !== "All") {
+      results = results.filter((item) => item.outcome === outcome);
+    }
+
+    if (attribute !== "All") {
+      results = results.filter((item) => item.attributes.includes(attribute));
+    }
+
+    if (sortBy === "A-Z") {
+      results.sort((a, b) => a.title.localeCompare(b.title));
+    }
+
+    return results;
+  }, [specialty, outcome, attribute, sortBy]);
+
+  const resetFilters = () => {
+    setSpecialty("All");
+    setOutcome("All");
+    setAttribute("All");
+    setSortBy("Default");
+  };
 
   return (
-    <div className="bg-offWhite">
-      {/* Main Content */}
-      <div className="xl:px-32 lg:px-16 px-8 py-12">
-        <h2 className="text-3xl font-bold mb-2 text-foreground">
-          Prototype Case Studies (for Education)
-        </h2>
-
-        <p className="text-muted-foreground mb-8 max-w-4xl">
-          These prototypes originate from Applina and are used for structured learning, evaluation exercises, and case-based education. They are not clinical devices and are not intended to replace professional judgment.
-        </p>
-
-        {/* Filters */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full">
-            <div>
-              <label className="text-sm font-medium text-muted-foreground mb-2 block">
-                Specialty
-              </label>
-              <Select value={specialtyFilter} onValueChange={setSpecialtyFilter}>
-                <SelectTrigger className="bg-card">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent className="bg-card border-border">
-                  {specialties.map((specialty) => (
-                    <SelectItem key={specialty} value={specialty}>
-                      {specialty}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div>
-              <label className="text-sm font-medium text-muted-foreground mb-2 block">
-                Outcome
-              </label>
-              <Select value={outcomeFilter} onValueChange={setOutcomeFilter}>
-                <SelectTrigger className="bg-card">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent className="bg-card border-border">
-                  {outcomes.map((outcome) => (
-                    <SelectItem key={outcome} value={outcome}>
-                      {outcome}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div>
-              <label className="text-sm font-medium text-muted-foreground mb-2 block">
-                Attributes
-              </label>
-              <Select value={attributeFilter} onValueChange={setAttributeFilter}>
-                <SelectTrigger className="bg-card">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent className="bg-card border-border">
-                  {attributes.map((attribute) => (
-                    <SelectItem key={attribute} value={attribute}>
-                      {attribute}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-
-            <div>
-              <label className="text-sm font-medium text-muted-foreground mb-2 block">
-                Sort by
-              </label>
-              <Select value={sortBy} onValueChange={setSortBy}>
-                <SelectTrigger className="bg-card">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent className="bg-card border-border">
-                  {sortOptions.map((option) => (
-                    <SelectItem key={option} value={option}>
-                      {option}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-full md:w-auto"
-            onClick={() => {
-              setSpecialtyFilter("All");
-              setOutcomeFilter("All");
-              setAttributeFilter("All");
-              setSortBy("Default");
-            }}
-          >
-            Reset Filters
-          </Button>
+    <section className="w-full bg-white text-brown px-6 md:px-10 lg:px-16 py-16 relative z-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Prototype Case Studies (for Education &amp; Evaluation)
+          </h2>
+          <p className="mt-4 text-base md:text-lg leading-[1.8] max-w-5xl mx-auto">
+            These case studies are derived from prototypes developed and
+            evaluated on Applina.
+          </p>
+          <p className="mt-4 text-base md:text-lg leading-[1.8] max-w-5xl mx-auto">
+            They are used within coursework and structured evaluation exercises
+            to examine how AI behaves in realistic scenarios, identify
+            limitations, and assess real-world relevance.
+          </p>
+          <p className="mt-4 text-base md:text-lg leading-[1.8] max-w-5xl mx-auto">
+            They are not clinical tools and are not intended to replace
+            professional judgment.
+          </p>
+          <p className="mt-4 text-base md:text-lg font-medium max-w-5xl mx-auto">
+            To explore or build new prototypes, visit Applina.
+          </p>
         </div>
 
-        {/* Tools Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredAndSortedTools.map((tool) => {
-            const IconComponent = tool.icon;
-            return (
-              <Card
-                key={tool.id}
-                className="hover:shadow-lg transition-all duration-300 border-border"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-brown shrink-0">
-                      <IconComponent className="h-6 w-6 text-lightBrown" />
-                    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4 mb-10">
+          <div>
+            <label className="block text-sm font-semibold mb-2">Specialty</label>
+            <select
+              value={specialty}
+              onChange={(e) => setSpecialty(e.target.value)}
+              className="w-full border border-brown/20 rounded-xl px-4 py-3 bg-white"
+            >
+              {specialties.map((item) => (
+                <option key={item} value={item}>
+                  {item}
+                </option>
+              ))}
+            </select>
+          </div>
 
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-2 flex-wrap">
-                        <h3 className="font-semibold text-lg text-foreground">
-                          {tool.title}
-                        </h3>
-                        <Badge variant="secondary" className="text-xs">
-                          Prototype
-                        </Badge>
-                        {tool.compliance && (
-                          <Badge variant="outline" className="text-xs">
-                            {tool.compliance}
-                          </Badge>
-                        )}
-                      </div>
+          <div>
+            <label className="block text-sm font-semibold mb-2">Outcome</label>
+            <select
+              value={outcome}
+              onChange={(e) => setOutcome(e.target.value)}
+              className="w-full border border-brown/20 rounded-xl px-4 py-3 bg-white"
+            >
+              {outcomes.map((item) => (
+                <option key={item} value={item}>
+                  {item}
+                </option>
+              ))}
+            </select>
+          </div>
 
-                      <p className="text-muted-foreground mb-4">
-                        {tool.description && tool.description.length > 140
-                          ? tool.description.slice(0, 140) + "..."
-                          : tool.description}
-                      </p>
+          <div>
+            <label className="block text-sm font-semibold mb-2">
+              Attributes
+            </label>
+            <select
+              value={attribute}
+              onChange={(e) => setAttribute(e.target.value)}
+              className="w-full border border-brown/20 rounded-xl px-4 py-3 bg-white"
+            >
+              {attributes.map((item) => (
+                <option key={item} value={item}>
+                  {item}
+                </option>
+              ))}
+            </select>
+          </div>
 
-                      <div className="flex flex-wrap gap-1 mb-4">
-                        {tool.attributes.map((attr) => (
-                          <Badge key={attr} variant="outline" className="text-xs">
-                            {attr}
-                          </Badge>
-                        ))}
-                      </div>
+          <div>
+            <label className="block text-sm font-semibold mb-2">Sort by</label>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="w-full border border-brown/20 rounded-xl px-4 py-3 bg-white"
+            >
+              <option value="Default">Default</option>
+              <option value="A-Z">A–Z</option>
+            </select>
+          </div>
 
-                      <div className="grid grid-cols-2 gap-2">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="w-full"
-                          onClick={() => window.open(tool.githubUrl, "_blank")}
-                        >
-                          <Github className="h-4 w-4 mr-2" />
-                          Build
-                        </Button>
-
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="w-full"
-                          onClick={() => window.open(tool.demoUrl || "#", "_blank")}
-                          disabled={!tool.demoUrl || tool.demoUrl === "#"}
-                        >
-                          <PlayCircle className="h-4 w-4 mr-2" />
-                          Preview
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+          <div className="flex items-end">
+            <button
+              onClick={resetFilters}
+              className="w-full border border-brown rounded-xl px-4 py-3 font-semibold hover:bg-brown hover:text-white transition"
+            >
+              Reset Filters
+            </button>
+          </div>
         </div>
 
-        {/* No Results */}
-        {filteredAndSortedTools.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground text-lg">
-              No prototypes found matching your filters. Try adjusting your criteria.
-            </p>
-          </div>
-        )}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+          {filteredCases.map((item) => (
+            <div
+              key={item.id}
+              className="border border-brown/15 rounded-3xl p-6 shadow-sm hover:shadow-md transition bg-white"
+            >
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="text-sm font-semibold px-3 py-1 rounded-full bg-lightBrown text-brown">
+                  {item.badge}
+                </span>
+                <span className="text-sm font-semibold px-3 py-1 rounded-full bg-offWhite text-brown">
+                  {item.secondaryBadge}
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-bold leading-tight mb-3">
+                {item.title}
+              </h3>
+
+              <p className="text-base leading-[1.7] mb-5">{item.description}</p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="text-sm px-3 py-1 rounded-full border border-brown/20">
+                  {item.specialty}
+                </span>
+                <span className="text-sm px-3 py-1 rounded-full border border-brown/20">
+                  {item.outcome}
+                </span>
+                {item.attributes.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-sm px-3 py-1 rounded-full border border-brown/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <button className="px-5 py-3 rounded-2xl bg-brown text-white font-semibold hover:opacity-90 transition">
+                  View Case
+                </button>
+                <button className="px-5 py-3 rounded-2xl border border-brown text-brown font-semibold hover:bg-brown hover:text-white transition">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};
+
+export default HealthcareToolsExplorer;
