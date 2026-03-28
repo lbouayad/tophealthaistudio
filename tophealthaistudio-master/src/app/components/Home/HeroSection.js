@@ -20,28 +20,28 @@ const HeroSection = () => {
             </h2>
 
             <p className="text-base sm:text-xl md:text-2xl lg:text-3xl text-white/90 max-w-4xl mx-auto mb-4">
-              Advancing clinically defensible AI through structured evaluation, interdisciplinary collaboration, and prototype based education.
+              Advancing clinically defensible AI through evaluation and prototype based education.
             </p>
 
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto mb-4">
-              Built on Applina, where prototypes are published and tested in realistic scenarios, the Studio transforms evaluated artifacts into structured learning and research informed education.
+              Artifacts from research and applied design are evaluated on Applina in realistic scenarios, then translated into structured learning.
             </p>
 
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto mb-4">
-              These are not vendor trainings.
+              Not vendor training.
             </p>
 
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto mb-4">
-              Courses are developed by researchers, professors, and domain experts in health IT, biomedical engineering, and design science. They use real artifacts to teach core concepts, frameworks, and real world decision making.
+              Courses are developed by researchers and domain experts using real artifacts to teach concepts, frameworks, and real world decision making.
             </p>
 
             <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto">
-              Our goal is to make meaningful innovation visible, understandable, and usable before it is lost in publication or deployed without evaluation.
+              Making innovation visible and usable before research, partnerships, or deployment.
             </p>
           </div>
 
           <Link
-            href="https://medaistudio.moodlecloud.com/"
+            href="https://medaistudio.moodlecloud.com/login/index.php"
             target="_blank"
             className="bg-orange text-white uppercase text-sm md:text-md font-bold tracking-wide px-6 sm:px-10 md:px-16 lg:px-20 py-4 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
           >
