@@ -28,15 +28,19 @@ const Campuses = () => {
                     className='md:w-1/2 w-full bg-lightBrown text-brown flex flex-col justify-center xl:pl-28 lg:pl-16 md:pl-10 sm:px-16 px-8 sm:pt-20 sm:pb-20 pt-14 pb-24'
                 >
                     <h2 className='font-bold text-3xl'>
-                        Prototype-Based Evaluation (via Applina)
+                        Prototype Based Evaluation (via Applina)
                     </h2>
 
                     <p className='text-base md:text-lg lg:text-lg xl:text-xl pt-4 md:w-2/3 normal-case'>
-                        We use Applina to evaluate AI behavior in realistic scenarios, including edge cases, escalation boundaries, communication patterns, and workflow fit.
+                        We use Applina to evaluate AI artifacts in realistic scenarios, including edge cases, escalation boundaries, communication patterns, and workflow fit.
                     </p>
 
                     <p className='pt-4 text-base md:text-lg lg:text-lg xl:text-xl md:w-2/3 normal-case'>
-                        The Studio focuses on interpreting these results and translating them into structured learning, research, and clinically grounded implementation thinking.
+                        The Studio translates these evaluated artifacts into structured learning. Prototypes are used to teach concepts, design decisions, limitations, and implementation considerations.
+                    </p>
+
+                    <p className='pt-4 text-base md:text-lg lg:text-lg xl:text-xl md:w-2/3 normal-case'>
+                        This is not case based education. It is prototype based learning grounded in how systems actually behave.
                     </p>
                 </div>
 
@@ -52,34 +56,24 @@ const Campuses = () => {
                     <div className="text-base md:text-lg lg:text-lg xl:text-xl pt-4 xl:w-2/3 lg:w-3/4 md:w-[90%] normal-case">
 
                         <p>
-                            We collaborate across medicine, engineering, operations research, and health policy to examine how AI systems perform in complex care environments.
+                            We collaborate across medicine, engineering, design science, and health policy to examine how AI artifacts perform in complex environments.
                         </p>
 
                         <p className='pt-4'>
-                            Our work supports publication-quality analysis, institutional partnerships, and CME-informed educational programming grounded in clinical accountability.
+                            Our work supports publication quality analysis, artifact visibility, and structured learning derived directly from research contributions.
                         </p>
 
                         <p className='pt-4'>
-                            The Studio operates independently from commercial AI vendors, maintaining a research-first and education-centered mission.
+                            We focus on making high value artifacts visible and usable beyond publication, so they can be evaluated, understood, and considered for real world use.
                         </p>
 
                     </div>
                 </div>
 
-                <div className='absolute self-center left-1/2 top-[42%] transform -translate-x-1/2 w-36 h-36 border-[0.3rem] bg-offWhite border-blue rounded-full flex items-center justify-center'>
-                    <Image src={"/Final_Number1.png"} width={200} height={200} alt='Top Health AI Studio Emblem' />
+                <div className='absolute self-center left-1/2 top-[42%] transform -translate-x-1/2 md:block hidden'>
+                    <Image src={'/Final_Number1.png'} width={500} height={500} alt='image' className='w-48 h-48' />
                 </div>
             </div>
-
-            <div className='w-full bg-brown text-lightBrown flex flex-row justify-center py-6 lg:px-16 sm:px-10 px-4 text-center'>
-                <p className='text-base md:text-lg lg:text-lg xl:text-xl font-semibold'>
-                    <span className='font-extrabold'>
-                        Responsible AI Requires Structured Evaluation.
-                    </span>
-                    {" "}Innovation must be clinically defensible, operationally sound, and ethically deployed.
-                </p>
-            </div>
-
         </div>
     )
 }

@@ -1,6 +1,5 @@
 "use client";
-
-import React, { useMemo, useState } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -10,156 +9,130 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import {
-  Users,
-  ClipboardList,
-  Brain,
-  FileText,
-  Bell,
-} from "lucide-react";
+import { Github, PlayCircle, Brain, Users, Bell, FileText, ClipboardList } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
-const prototypeCases = [
+const healthcareTools = [
   {
     id: 1,
-    title: "Patient Communication Scenario",
-    description:
-      "Examines how AI handles patient-facing communication, response style, escalation cues, and contextual appropriateness in realistic scenarios.",
+    title: "Patient Communication Prototype",
+    description: "Grounded in a real evaluated artifact used to explore communication behavior, response style, and contextual appropriateness in realistic scenarios.",
     icon: Users,
     specialty: "Communication",
-    outcome: "Engagement",
+    outcome: "Relevance",
     attributes: ["Education", "Evaluation"],
-    caseUrl: "#",
-    detailsUrl: "#",
+    githubUrl: "#",
+    demoUrl: "#",
+    compliance: "Learning module",
   },
   {
     id: 2,
-    title: "Pre-Procedure Readiness Scenario",
-    description:
-      "Explores how AI supports readiness checks, preparation instructions, and completeness assessment before time or resources are committed.",
+    title: "Readiness and Intake Prototype",
+    description: "Used to examine how systems support preparation, instructions, completeness, and decision logic before time or resources are committed.",
     icon: ClipboardList,
     specialty: "Preparation",
     outcome: "Readiness",
     attributes: ["Education", "Evaluation"],
-    caseUrl: "#",
-    detailsUrl: "#",
+    githubUrl: "#",
+    demoUrl: "#",
+    compliance: "Learning module",
   },
   {
     id: 3,
-    title: "Symptom Pattern Interpretation Scenario",
-    description:
-      "Used to study how AI structures inputs, identifies patterns, and communicates uncertainty when scenarios involve symptom variation and ambiguity.",
+    title: "Interpretation and Routing Prototype",
+    description: "Supports structured learning around ambiguity, pattern identification, uncertainty communication, and real world relevance in complex scenarios.",
     icon: Brain,
     specialty: "Interpretation",
     outcome: "Relevance",
     attributes: ["Education", "Evaluation"],
-    caseUrl: "#",
-    detailsUrl: "#",
+    githubUrl: "#",
+    demoUrl: "#",
+    compliance: "Learning module",
   },
   {
     id: 4,
-    title: "Clinical Documentation Scenario",
-    description:
-      "Assesses how AI organizes documentation-style outputs, preserves fidelity to source information, and avoids overreach in realistic use cases.",
+    title: "Documentation Behavior Prototype",
+    description: "Examines how systems organize outputs, preserve fidelity to source information, and avoid overreach in realistic documentation settings.",
     icon: FileText,
     specialty: "Documentation",
     outcome: "Quality",
     attributes: ["Education", "Evaluation"],
-    caseUrl: "#",
-    detailsUrl: "#",
+    githubUrl: "#",
+    demoUrl: "#",
+    compliance: "Learning module",
   },
   {
     id: 5,
-    title: "Continuity & Follow-Up Scenario",
-    description:
-      "Examines how AI supports continuity, follow-up communication, and workflow handoffs while maintaining clarity, restraint, and usefulness.",
+    title: "Follow Up and Continuity Prototype",
+    description: "Used to explore handoffs, communication continuity, follow up behavior, and usefulness across extended real world interactions.",
     icon: Bell,
     specialty: "Continuity",
     outcome: "Retention",
     attributes: ["Education", "Evaluation"],
-    caseUrl: "#",
-    detailsUrl: "#",
+    githubUrl: "#",
+    demoUrl: "#",
+    compliance: "Learning module",
   },
 ];
 
-const uniqueValues = (items, key) => {
-  const values = new Set();
-  items.forEach((item) => {
-    if (Array.isArray(item[key])) {
-      item[key].forEach((v) => values.add(v));
-    } else {
-      values.add(item[key]);
-    }
-  });
-  return ["All", ...Array.from(values)];
-};
+const specialties = ["All", "Communication", "Preparation", "Interpretation", "Documentation", "Continuity"];
+const outcomes = ["All", "Relevance", "Readiness", "Quality", "Retention"];
+const attributes = ["All", "Education", "Evaluation"];
+const sortOptions = ["Default", "Name"];
 
 export function HealthcareToolsExplorer() {
-  const [specialty, setSpecialty] = useState("All");
-  const [outcome, setOutcome] = useState("All");
-  const [attribute, setAttribute] = useState("All");
+  const [specialtyFilter, setSpecialtyFilter] = useState("All");
+  const [outcomeFilter, setOutcomeFilter] = useState("All");
+  const [attributeFilter, setAttributeFilter] = useState("All");
   const [sortBy, setSortBy] = useState("Default");
 
-  const specialties = useMemo(
-    () => uniqueValues(prototypeCases, "specialty"),
-    []
-  );
-  const outcomes = useMemo(() => uniqueValues(prototypeCases, "outcome"), []);
-  const attributes = useMemo(
-    () => uniqueValues(prototypeCases, "attributes"),
-    []
-  );
+  const filteredAndSortedTools = useMemo(() => {
+    let filtered = healthcareTools.filter((tool) => {
+      const matchesSpecialty =
+        specialtyFilter === "All" || tool.specialty === specialtyFilter;
+      const matchesOutcome =
+        outcomeFilter === "All" || tool.outcome === outcomeFilter;
+      const matchesAttribute =
+        attributeFilter === "All" ||
+        tool.attributes.some((attr) => attr === attributeFilter);
 
-  const filteredCases = useMemo(() => {
-    let results = [...prototypeCases];
+      return matchesSpecialty && matchesOutcome && matchesAttribute;
+    });
 
-    if (specialty !== "All") {
-      results = results.filter((item) => item.specialty === specialty);
+    switch (sortBy) {
+      case "Name":
+        return filtered.sort((a, b) => a.title.localeCompare(b.title));
+      case "Default":
+      default:
+        return filtered;
     }
-
-    if (outcome !== "All") {
-      results = results.filter((item) => item.outcome === outcome);
-    }
-
-    if (attribute !== "All") {
-      results = results.filter((item) => item.attributes.includes(attribute));
-    }
-
-    if (sortBy === "A-Z") {
-      results.sort((a, b) => a.title.localeCompare(b.title));
-    }
-
-    return results;
-  }, [specialty, outcome, attribute, sortBy]);
-
-  const resetFilters = () => {
-    setSpecialty("All");
-    setOutcome("All");
-    setAttribute("All");
-    setSortBy("Default");
-  };
+  }, [specialtyFilter, outcomeFilter, attributeFilter, sortBy]);
 
   return (
     <div className="bg-offWhite">
       <div className="xl:px-32 lg:px-16 px-8 py-12">
         <h2 className="text-3xl font-bold mb-2 text-foreground">
-          Prototype Case Studies (for Education &amp; Evaluation)
+          Prototype Based Learning Modules for Education and Evaluation
         </h2>
 
         <p className="text-muted-foreground mb-4 max-w-4xl">
-          These case studies are derived from prototypes developed and evaluated
-          on Applina.
+          These learning modules are derived from prototypes developed and evaluated on Applina.
         </p>
 
         <p className="text-muted-foreground mb-4 max-w-4xl">
-          They are used within coursework and structured evaluation exercises to
-          examine how AI behaves in realistic scenarios, identify limitations,
-          and assess real-world relevance.
+          They are used within courses and structured evaluation exercises to examine how AI behaves in realistic scenarios, identify limitations, and assess real world relevance.
         </p>
 
         <p className="text-muted-foreground mb-4 max-w-4xl">
-          They are not clinical tools and are not intended to replace
-          professional judgment.
+          Each module is grounded in an underlying artifact and designed to teach concepts, frameworks, and implementation considerations through direct interaction with evaluated systems.
+        </p>
+
+        <p className="text-muted-foreground mb-4 max-w-4xl">
+          These artifacts often originate from research in design science, biomedical engineering, and applied AI, where they may otherwise remain isolated from practice.
+        </p>
+
+        <p className="text-muted-foreground mb-4 max-w-4xl">
+          They are not clinical tools and are not intended to replace professional judgment.
         </p>
 
         <p className="text-foreground font-medium mb-8 max-w-4xl">
@@ -172,14 +145,14 @@ export function HealthcareToolsExplorer() {
               <label className="text-sm font-medium text-muted-foreground mb-2 block">
                 Specialty
               </label>
-              <Select value={specialty} onValueChange={setSpecialty}>
+              <Select value={specialtyFilter} onValueChange={setSpecialtyFilter}>
                 <SelectTrigger className="bg-card">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent className="bg-card border-border">
-                  {specialties.map((item) => (
-                    <SelectItem key={item} value={item}>
-                      {item}
+                  {specialties.map((specialty) => (
+                    <SelectItem key={specialty} value={specialty}>
+                      {specialty}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -190,14 +163,14 @@ export function HealthcareToolsExplorer() {
               <label className="text-sm font-medium text-muted-foreground mb-2 block">
                 Outcome
               </label>
-              <Select value={outcome} onValueChange={setOutcome}>
+              <Select value={outcomeFilter} onValueChange={setOutcomeFilter}>
                 <SelectTrigger className="bg-card">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent className="bg-card border-border">
-                  {outcomes.map((item) => (
-                    <SelectItem key={item} value={item}>
-                      {item}
+                  {outcomes.map((outcome) => (
+                    <SelectItem key={outcome} value={outcome}>
+                      {outcome}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -208,14 +181,14 @@ export function HealthcareToolsExplorer() {
               <label className="text-sm font-medium text-muted-foreground mb-2 block">
                 Attributes
               </label>
-              <Select value={attribute} onValueChange={setAttribute}>
+              <Select value={attributeFilter} onValueChange={setAttributeFilter}>
                 <SelectTrigger className="bg-card">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent className="bg-card border-border">
-                  {attributes.map((item) => (
-                    <SelectItem key={item} value={item}>
-                      {item}
+                  {attributes.map((attribute) => (
+                    <SelectItem key={attribute} value={attribute}>
+                      {attribute}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -231,8 +204,11 @@ export function HealthcareToolsExplorer() {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent className="bg-card border-border">
-                  <SelectItem value="Default">Default</SelectItem>
-                  <SelectItem value="A-Z">A–Z</SelectItem>
+                  {sortOptions.map((option) => (
+                    <SelectItem key={option} value={option}>
+                      {option}
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
             </div>
@@ -242,19 +218,23 @@ export function HealthcareToolsExplorer() {
             variant="outline"
             size="sm"
             className="w-full md:w-auto"
-            onClick={resetFilters}
+            onClick={() => {
+              setSpecialtyFilter("All");
+              setOutcomeFilter("All");
+              setAttributeFilter("All");
+              setSortBy("Default");
+            }}
           >
             Reset Filters
           </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredCases.map((item) => {
-            const IconComponent = item.icon;
-
+          {filteredAndSortedTools.map((tool) => {
+            const IconComponent = tool.icon;
             return (
               <Card
-                key={item.id}
+                key={tool.id}
                 className="hover:shadow-lg transition-all duration-300 border-border"
               >
                 <CardContent className="p-6">
@@ -266,28 +246,24 @@ export function HealthcareToolsExplorer() {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-2 flex-wrap">
                         <h3 className="font-semibold text-lg text-foreground">
-                          {item.title}
+                          {tool.title}
                         </h3>
                         <Badge variant="secondary" className="text-xs">
-                          Case study
+                          Prototype
                         </Badge>
-                        <Badge variant="outline" className="text-xs">
-                          Used in coursework
-                        </Badge>
+                        {tool.compliance && (
+                          <Badge variant="outline" className="text-xs">
+                            {tool.compliance}
+                          </Badge>
+                        )}
                       </div>
 
                       <p className="text-muted-foreground mb-4">
-                        {item.description}
+                        {tool.description}
                       </p>
 
                       <div className="flex flex-wrap gap-1 mb-4">
-                        <Badge variant="outline" className="text-xs">
-                          {item.specialty}
-                        </Badge>
-                        <Badge variant="outline" className="text-xs">
-                          {item.outcome}
-                        </Badge>
-                        {item.attributes.map((attr) => (
+                        {tool.attributes.map((attr) => (
                           <Badge key={attr} variant="outline" className="text-xs">
                             {attr}
                           </Badge>
@@ -299,20 +275,21 @@ export function HealthcareToolsExplorer() {
                           variant="outline"
                           size="sm"
                           className="w-full"
-                          onClick={() => window.open(item.caseUrl || "#", "_blank")}
+                          onClick={() => window.open(tool.githubUrl, "_blank")}
                         >
-                          View Case
+                          <Github className="h-4 w-4 mr-2" />
+                          Explore Module
                         </Button>
 
                         <Button
                           variant="outline"
                           size="sm"
                           className="w-full"
-                          onClick={() =>
-                            window.open(item.detailsUrl || "#", "_blank")
-                          }
+                          onClick={() => window.open(tool.demoUrl || "#", "_blank")}
+                          disabled={!tool.demoUrl || tool.demoUrl === "#"}
                         >
-                          Learn More
+                          <PlayCircle className="h-4 w-4 mr-2" />
+                          View Artifact
                         </Button>
                       </div>
                     </div>
@@ -323,11 +300,10 @@ export function HealthcareToolsExplorer() {
           })}
         </div>
 
-        {filteredCases.length === 0 && (
+        {filteredAndSortedTools.length === 0 && (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
-              No case studies found matching your filters. Try adjusting your
-              criteria.
+              No learning modules found matching your filters. Try adjusting your criteria.
             </p>
           </div>
         )}

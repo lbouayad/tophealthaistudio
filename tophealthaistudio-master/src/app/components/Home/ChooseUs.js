@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { FaChartBar, FaTools, FaCode, FaLightbulb, FaStar, FaRobot, FaSearch } from "react-icons/fa";
+import { FaChartBar, FaTools, FaStar, FaRobot, FaSearch } from "react-icons/fa";
 import { LuHandshake } from "react-icons/lu";
 
 const ChooseUs = () => {
@@ -28,7 +28,6 @@ const ChooseUs = () => {
                     <Image src={"/WhyChooseUs.png"} width={500} height={500} alt='image' className='h-48 w-auto rounded-full' />
                 </div>
 
-                {/* 1st */}
                 <div className={`relative -left-[30.6rem] -top-[15.2rem]`}>
                     <div className={`${pillStyle}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
@@ -39,18 +38,16 @@ const ChooseUs = () => {
                     <div className='w-28 border-t-2 border-t-lightBrown absolute rotate-[56deg] top-[6.84rem] left-[15rem] lg:block hidden' />
                 </div>
 
-                {/* 2nd */}
                 <div className={`relative -left-[2.8rem] -top-[15.2rem]`}>
                     <div className={`${pillStyle}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaRobot className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Clinically Grounded Prototypes</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Artifact Grounded Learning</h2>
                     </div>
                     <div className='w-28 border-t-2 border-t-lightBrown absolute -rotate-[56deg] top-[6.9rem] -left-[2.5rem] lg:block hidden' />
                 </div>
 
-                {/* 3rd */}
                 <div className={`relative -left-[36.6rem] -top-[3rem]`}>
                     <div className={`${pillStyle}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
@@ -61,18 +58,16 @@ const ChooseUs = () => {
                     <div className='w-20 border-t-2 border-t-lightBrown absolute top-[3rem] left-[18.3rem] z-20 lg:block hidden' />
                 </div>
 
-                {/* 4th */}
                 <div className={`relative left-[3rem] -top-[3rem]`}>
                     <div className={`${pillStyle}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaTools className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Workflow & Safety Focused</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Workflow and Safety Focused</h2>
                     </div>
                     <div className='w-20 border-t-2 border-t-lightBrown absolute top-[3rem] -left-[3.68rem] z-20 lg:block hidden' />
                 </div>
 
-                {/* 5th */}
                 <div className={`relative -left-[30.7rem] top-[9rem]`}>
                     <div className={`${pillStyle}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
@@ -83,21 +78,18 @@ const ChooseUs = () => {
                     <div className='w-24 border-t-2 border-t-lightBrown absolute -rotate-[56deg] -top-[0.6rem] left-[17rem] z-20 lg:block hidden' />
                 </div>
 
-                {/* 6th */}
                 <div className={`relative -left-[3rem] top-[9rem]`}>
                     <div className={`${pillStyle}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <LuHandshake className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Education & Research Collaboration</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Research Visibility and Translation</h2>
                     </div>
                     <div className='w-24 border-t-2 border-t-lightBrown absolute rotate-[56deg] -top-[1rem] -left-[2.4rem] z-20 lg:block hidden' />
                 </div>
             </div>
 
-            {/* Small Screen */}
             <div className='relative w-full max-w-[1525px] flex flex-col items-center justify-center lg:hidden'>
-                {/* 1st */}
                 <div className={`relative`}>
                     <div className={`${pillStyleSmall}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
@@ -107,17 +99,15 @@ const ChooseUs = () => {
                     </div>
                 </div>
 
-                {/* 2nd */}
                 <div className={`relative`}>
                     <div className={`${pillStyleSmall}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaRobot className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Clinically Grounded Prototypes</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Artifact Grounded Learning</h2>
                     </div>
                 </div>
 
-                {/* 3rd */}
                 <div className={`relative`}>
                     <div className={`${pillStyleSmall}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
@@ -131,17 +121,15 @@ const ChooseUs = () => {
                     <Image src={"/WhyChooseUs.png"} width={500} height={500} alt='image' className='h-48 w-auto rounded-full' />
                 </div>
 
-                {/* 4th */}
                 <div className={`relative`}>
                     <div className={`${pillStyleSmall}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaTools className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Workflow & Safety Focused</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Workflow and Safety Focused</h2>
                     </div>
                 </div>
 
-                {/* 5th */}
                 <div className={`relative`}>
                     <div className={`${pillStyleSmall}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
@@ -151,13 +139,12 @@ const ChooseUs = () => {
                     </div>
                 </div>
 
-                {/* 6th */}
                 <div className={`relative`}>
                     <div className={`${pillStyleSmall}`}>
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <LuHandshake className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Education & Research Collaboration</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Research Visibility and Translation</h2>
                     </div>
                 </div>
             </div>

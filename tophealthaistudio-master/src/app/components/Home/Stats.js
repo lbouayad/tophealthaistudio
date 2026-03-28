@@ -9,11 +9,11 @@ const Stats = () => {
       </h1>
 
       <p className="max-w-5xl text-lg md:text-xl leading-[1.7]">
-        Applina is where prototypes are built, published, tested, and evaluated in realistic scenarios.
+        Applina is where artifacts are built, published, tested, and evaluated.
         <br /><br />
-        Top Health AI Studio is where those insights are translated into structured education, research, and applied learning.
+        Top Health AI Studio is where those artifacts are translated into learning, visibility, and real world understanding.
         <br /><br />
-        Together, they bridge the gap between technical innovation and real-world implementation.
+        Together, they help ensure that innovation is not built in isolation, not lost in publication, and not advanced without evaluation.
       </p>
     </div>
   );

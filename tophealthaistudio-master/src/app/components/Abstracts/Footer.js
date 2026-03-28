@@ -22,7 +22,7 @@ const Footer = () => {
               <h2 className='font-bold text-2xl'>Courses</h2>
 
               <p className='text-sm pt-3 max-w-sm'>
-                Applina is the platform for publishing, testing, and validating health AI prototypes. Top Health AI Studio focuses on education, research, and structured learning built around those evaluations.
+                Applina is the platform for publishing, testing, and validating health AI prototypes. Top Health AI Studio builds structured learning around those evaluated artifacts, including CME and non CME courses, learning modules, and research informed education.
               </p>
 
               <a
@@ -90,7 +90,7 @@ const Footer = () => {
             </div>
 
             <p className='text-xs pt-3 text-brown/80 max-w-sm'>
-              Top Health AI Studio is distinct from Top Health AI LLC (clinical AI solutions) and the Top Health AI Foundation (nonprofit).
+              Top Health AI Studio is distinct from Top Health AI LLC and the Top Health AI Foundation.
             </p>
           </div>
         </div>

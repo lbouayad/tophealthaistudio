@@ -22,7 +22,6 @@ const EnrollmentSteps = () => {
       </h1>
 
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-20 lg:gap-y-0 gap-y-20 items-center justify-center pt-24 relative">
-        {/* 1 */}
         <div className="relative group">
           <UpperCurve className={"absolute sm:-top-6 sm:-left-6 left-14 top-14 sm:rotate-0 rotate-90"} />
           <div data-aos="zoom-in" data-aos-duration="1000"
@@ -36,11 +35,10 @@ const EnrollmentSteps = () => {
             </h2>
           </div>
           <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Review courses and evaluation frameworks aligned to real clinical workflows
+            Review prototype based courses, learning modules, and evaluation frameworks aligned to real world implementation questions
           </div>
         </div>
 
-        {/* 2 */}
         <div className="relative group">
           <BottomCurve className={"absolute sm:-bottom-6 sm:-left-6 -left-28 bottom-12 sm:rotate-0 rotate-90"} />
           <div data-aos="zoom-in" data-aos-duration="1000"
@@ -54,11 +52,10 @@ const EnrollmentSteps = () => {
             </h2>
           </div>
           <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Submit your program interest and indicate your educational or research goals
+            Submit your interest and indicate whether your goals are educational, research oriented, or tied to evaluating a specific artifact
           </div>
         </div>
 
-        {/* 3 */}
         <div className="relative group">
           <UpperCurve className={"absolute sm:-top-6 sm:-left-6 left-14 top-14 sm:rotate-0 rotate-90"} />
           <div data-aos="zoom-in" data-aos-duration="1000"
@@ -68,11 +65,10 @@ const EnrollmentSteps = () => {
             <h2 className="text-xl pt-2">Orientation</h2>
           </div>
           <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Learn expectations, evaluation methods, and clinical accountability boundaries
+            Learn expectations, evaluation methods, artifact context, and the principles that will guide structured learning
           </div>
         </div>
 
-        {/* 4 */}
         <div className="relative group">
           <BottomCurve className={"absolute sm:-bottom-6 sm:-left-6 -left-28 bottom-12 sm:rotate-0 rotate-90"} />
           <div data-aos="zoom-in" data-aos-duration="1000"
@@ -82,11 +78,11 @@ const EnrollmentSteps = () => {
             <h2 className="text-xl pt-2">
               Apply
               <br />
-              &amp; Evaluate
+              and Evaluate
             </h2>
           </div>
           <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Use prototypes and structured testing to assess workflow impact and readiness for practice
+            Use evaluated prototypes and structured learning to understand what is worth advancing before data collection, partnerships, or deployment
           </div>
         </div>
       </div>
@@ -98,12 +94,11 @@ const EnrollmentSteps = () => {
           rel="noopener noreferrer"
           className="bg-orange text-white uppercase text-sm md:text-md font-bold tracking-wide px-6 sm:px-10 md:px-16 lg:px-20 py-4 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
         >
-          Access Learning Platform <br /> (CME Accreditation in Progress)
+          Access Learning Platform
         </a>
 
         <p className="text-brown/80 text-sm md:text-base mt-4 max-w-2xl text-center px-6">
-          Continuing medical education (CME) accreditation is currently in progress. Course access and
-          participation are available through our learning platform.
+          CME accreditation is currently in progress. Course access and participation are available through our learning platform alongside non CME offerings and artifact grounded learning modules.
         </p>
       </div>
     </div>

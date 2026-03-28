@@ -5,20 +5,15 @@ import "aos/dist/aos.css";
 
 const Offers = () => {
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    Aos.init({ once: true, disableMutationObserver: true });
+    Aos.init();
   }, []);
 
   return (
-    <div
-      id="offerings"
-      className="w-full items-center justify-center flex flex-col pt-8 pb-24 overflow-hidden relative z-20 bg-offWhite"
-    >
-      <h1 className="mainHeading text-brown uppercase">Offerings</h1>
+    <div id="offerings" className="w-full flex flex-col justify-center bg-brown text-center lg:py-24 py-16 overflow-hidden relative z-20">
+      <h1 className="mainHeading text-lightBrown uppercase">Offerings</h1>
 
-      <div className="2xl:w-full max-w-screen-2xl w-[95%] grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4 lg:gap-3 items-start justify-center mt-4">
-        {/* Offering 1 */}
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 lg:gap-y-0 gap-y-10 py-14 relative z-10 px-6 xl:px-20">
+        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -38,10 +33,9 @@ const Offers = () => {
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Applied Health AI Courses</h2>
+              <h2 className="font-bold text-lg">Prototype Based Health AI Courses</h2>
               <p className="pt-1 text-sm">
-                Structured learning in clinical AI, workflow evaluation, and implementation rigor.
-                CME accreditation is currently in progress.
+                Structured learning grounded in real evaluated artifacts. Covers clinical AI, evaluation methods, and implementation rigor. CME accreditation is in progress.
               </p>
             </div>
           </div>
@@ -58,8 +52,7 @@ const Offers = () => {
           />
         </div>
 
-        {/* Offering 2 */}
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
+        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-0 mt-0">
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -79,10 +72,9 @@ const Offers = () => {
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Prototype-Based Learning & Evaluation</h2>
+              <h2 className="font-bold text-lg">Artifact Based Learning and Evaluation</h2>
               <p className="pt-1 text-sm">
-                Guided evaluation of AI behavior in simulated workflows—edge cases, escalation boundaries,
-                and documentation reliability.
+                Guided interaction with evaluated prototypes to understand system behavior, edge cases, and real world constraints.
               </p>
             </div>
           </div>
@@ -99,8 +91,7 @@ const Offers = () => {
           />
         </div>
 
-        {/* Offering 3 */}
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto">
+        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -120,9 +111,9 @@ const Offers = () => {
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Workflow Evaluation Frameworks</h2>
+              <h2 className="font-bold text-lg">Evaluation Frameworks</h2>
               <p className="pt-1 text-sm">
-                Methods to assess clinical risk, operational impact, and implementation readiness across care environments.
+                Methods to assess clinical risk, operational impact, and implementation readiness across environments.
               </p>
             </div>
           </div>
@@ -139,7 +130,6 @@ const Offers = () => {
           />
         </div>
 
-        {/* Offering 4 */}
         <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
@@ -160,9 +150,9 @@ const Offers = () => {
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Research Collaboration</h2>
+              <h2 className="font-bold text-lg">Research Translation and Visibility</h2>
               <p className="pt-1 text-sm">
-                Partnership pathways for academic teams and institutions to study responsible clinical AI implementation and evaluation.
+                Transforming research artifacts into structured learning experiences that increase visibility, understanding, and real world relevance.
               </p>
             </div>
           </div>
@@ -187,12 +177,11 @@ const Offers = () => {
           rel="noopener noreferrer"
           className="bg-orange text-white uppercase text-xs md:text-sm font-bold tracking-wide px-5 sm:px-8 md:px-12 lg:px-16 py-3 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
         >
-          Access Learning Platform <br /> (CME Accreditation in Progress)
+          Access Learning Platform
         </a>
 
         <p className="text-brown text-sm md:text-base mt-4 max-w-2xl text-center px-6">
-          Courses are available through our learning platform. Continuing medical education (CME)
-          accreditation is currently in progress.
+          CME accreditation is currently in progress. Offerings include CME and non CME courses, artifact grounded learning modules, and research translation.
         </p>
       </div>
     </div>

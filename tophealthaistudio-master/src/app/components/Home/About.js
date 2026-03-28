@@ -24,19 +24,19 @@ const About = () => {
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Prototypes are built and evaluated on <span className="font-semibold">Applina</span> — our dedicated platform for publishing and testing health AI artifacts in realistic scenarios. Top Health AI Studio extends this work into structured education, research, and applied learning.
+          Prototypes are built and evaluated on Applina, our platform for publishing and testing health AI artifacts in realistic scenarios. The Studio transforms these artifacts into structured education, research, and applied learning.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          We develop and teach structured methods to evaluate AI systems in real-world healthcare environments, emphasizing clinical accountability, workflow integrity, explainability, and implementation feasibility.
+          We develop and teach methods to evaluate AI systems in real world environments, with emphasis on clinical accountability, workflow integrity, explainability, and implementation feasibility.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Through courses, prototype-based evaluation, and interdisciplinary collaboration across medicine, engineering, and policy, we support clinicians, researchers, and institutions in translating innovation into evidence-aligned, operationally sound, and ethically deployed practice.
+          Our approach is prototype based. Real evaluated artifacts are used to teach concepts, frameworks, and decision making, rather than abstract examples or vendor tools.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Top Health AI Studio is distinct from Top Health AI LLC (clinical AI solutions) and the Top Health AI Foundation (nonprofit), maintaining a clear academic and research-focused mission.
+          Through courses, artifact grounded learning, and interdisciplinary collaboration, we support clinicians, researchers, and institutions in translating innovation into evidence aligned and operationally sound practice.
         </p>
       </div>
 
