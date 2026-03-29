@@ -37,21 +37,6 @@ const learningArtifacts = [
   },
   {
     id: 2,
-    title:
-      "Mental Health and Institutional Decision Artifact (Explainability and Fairness)",
-    type: "Artifact",
-    moduleType: "Learning module",
-    description:
-      "Explores how decisions about institutional versus community based care are shaped, and how mental health factors are often underrepresented or misunderstood. This artifact focuses on how transparency in decision making can influence fairness, accountability, and long term outcomes. For providers and policymakers, it raises critical questions about bias and incomplete data. For individuals and families, it highlights how unseen factors can influence life changing decisions. This module examines how AI can support more informed and equitable decision making.",
-    icon: Scale,
-    category: "Behavioral Health",
-    focus: "Explainability",
-    attributes: ["Education", "Evaluation"],
-    moduleUrl: "https://medaistudio.moodlecloud.com/login/index.php",
-    artifactUrl: "https://applina.ai",
-  },
-  {
-    id: 3,
     title: "Clinical Communication and Trust Artifact",
     type: "Prototype",
     moduleType: "Learning module",
@@ -65,7 +50,7 @@ const learningArtifacts = [
     artifactUrl: "https://applina.ai",
   },
   {
-    id: 4,
+    id: 3,
     title: "Clinical Readiness and Decision Boundary Artifact",
     type: "Prototype",
     moduleType: "Learning module",
@@ -79,7 +64,7 @@ const learningArtifacts = [
     artifactUrl: "https://applina.ai",
   },
   {
-    id: 5,
+    id: 4,
     title: "Clinical Documentation and Truth Representation Artifact",
     type: "Artifact",
     moduleType: "Learning module",
@@ -93,7 +78,7 @@ const learningArtifacts = [
     artifactUrl: "https://applina.ai",
   },
   {
-    id: 6,
+    id: 5,
     title: "Follow Up and Continuity of Care Artifact",
     type: "Prototype",
     moduleType: "Learning module",
