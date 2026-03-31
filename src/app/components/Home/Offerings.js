@@ -1,191 +1,82 @@
 "use client";
-import React, { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import React from "react";
+import Link from "next/link";
 
-const Offers = () => {
-  useEffect(() => {
-    Aos.init();
-  }, []);
+const offerings = [
+  {
+    number: "01",
+    title: "Prototype Based Health AI Courses",
+    description:
+      "Structured learning grounded in evaluated artifacts. Focused on clinical AI, evaluation, and implementation.",
+  },
+  {
+    number: "02",
+    title: "Artifact Based Learning and Evaluation",
+    description:
+      "Direct interaction with evaluated systems to understand behavior, limitations, and real world constraints.",
+  },
+  {
+    number: "03",
+    title: "Evaluation Frameworks",
+    description:
+      "Methods to assess clinical risk, operational impact, and implementation readiness.",
+  },
+  {
+    number: "04",
+    title: "Research Translation and Visibility",
+    description:
+      "Turning research artifacts into usable, decision relevant knowledge.",
+  },
+];
 
+const Offerings = () => {
   return (
-    <div id="offerings" className="w-full flex flex-col justify-center bg-brown text-center lg:py-24 py-16 overflow-hidden relative z-20">
-      <h1 className="mainHeading text-lightBrown uppercase">Offerings</h1>
+    <div
+      id="offerings"
+      className="bg-brown w-full flex flex-col items-center justify-center text-white px-8 lg:px-16 xl:px-32 py-16 relative z-20"
+    >
+      <div className="w-full max-w-7xl">
+        <h1 className="text-3xl md:text-4xl font-bold mb-10 text-center lg:text-left">
+          Offerings
+        </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 lg:gap-y-0 gap-y-10 py-14 relative z-10 px-6 xl:px-20">
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
-          <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {offerings.map((item) => (
             <div
-              className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
-              style={{
-                background:
-                  "radial-gradient(ellipse, rgba(241, 229, 216, 0) 0%, rgba(224, 204, 186, 0.2) 52%, rgba(210, 190, 175, 0.4) 55%, rgba(180, 160, 145, 0.65) 62%, rgba(241, 229, 216, 0) 63%, rgba(241, 229, 216, 0) 100%)",
-              }}
+              key={item.number}
+              className="border border-white/20 rounded-3xl p-6 bg-white/5"
             >
-              01
-            </div>
-          </div>
-
-          <div
-            className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
-          />
-
-          <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
-            <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Prototype Based Health AI Courses</h2>
-              <p className="pt-1 text-sm">
-                Structured learning grounded in real evaluated artifacts. Covers clinical AI, evaluation methods, and implementation rigor. CME accreditation is in progress.
+              <div className="text-lightBrown font-bold text-xl mb-3">
+                {item.number}
+              </div>
+              <h2 className="text-xl md:text-2xl font-semibold mb-3">
+                {item.title}
+              </h2>
+              <p className="text-white/85 text-base md:text-lg leading-relaxed">
+                {item.description}
               </p>
             </div>
-          </div>
-
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-          <div
-            className="-mt-3 mx-[4.7rem]"
-            style={{
-              background:
-                "radial-gradient(ellipse, rgba(50,50,50,0.7) 0%, rgba(120,120,120,0.5) 35%, rgba(125,125,125,0.2) 50%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%)",
-              width: "100px",
-              height: "16px",
-            }}
-          />
+          ))}
         </div>
 
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-0 mt-0">
-          <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
-            <div
-              className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
-              style={{
-                background:
-                  "radial-gradient(ellipse, rgba(241, 229, 216, 0) 0%, rgba(224, 204, 186, 0.2) 52%, rgba(210, 190, 175, 0.4) 55%, rgba(180, 160, 145, 0.65) 62%, rgba(241, 229, 216, 0) 63%, rgba(241, 229, 216, 0) 100%)",
-              }}
-            >
-              02
-            </div>
-          </div>
+        <div className="mt-12 flex flex-col items-center lg:items-start">
+          <Link
+            href="https://medaistudio.moodlecloud.com/login/index.php"
+            target="_blank"
+            className="bg-orange text-white uppercase text-sm md:text-md font-bold tracking-wide px-8 md:px-12 py-4 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
+          >
+            Access Learning Platform
+          </Link>
 
-          <div
-            className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
-          />
-
-          <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
-            <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Artifact Based Learning and Evaluation</h2>
-              <p className="pt-1 text-sm">
-                Guided interaction with evaluated prototypes to understand system behavior, edge cases, and real world constraints.
-              </p>
-            </div>
-          </div>
-
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-          <div
-            className="-mt-3 mx-[4.7rem]"
-            style={{
-              background:
-                "radial-gradient(ellipse, rgba(50,50,50,0.7) 0%, rgba(120,120,120,0.5) 35%, rgba(125,125,125,0.2) 50%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%)",
-              width: "100px",
-              height: "16px",
-            }}
-          />
+          <p className="mt-4 text-white/80 text-center lg:text-left max-w-3xl">
+            CME accreditation is currently in progress. Offerings include CME
+            and non CME courses, artifact grounded learning modules, and
+            research translation.
+          </p>
         </div>
-
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
-          <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
-            <div
-              className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
-              style={{
-                background:
-                  "radial-gradient(ellipse, rgba(241, 229, 216, 0) 0%, rgba(224, 204, 186, 0.2) 52%, rgba(210, 190, 175, 0.4) 55%, rgba(180, 160, 145, 0.65) 62%, rgba(241, 229, 216, 0) 63%, rgba(241, 229, 216, 0) 100%)",
-              }}
-            >
-              03
-            </div>
-          </div>
-
-          <div
-            className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
-          />
-
-          <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
-            <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Evaluation Frameworks</h2>
-              <p className="pt-1 text-sm">
-                Methods to assess clinical risk, operational impact, and implementation readiness across environments.
-              </p>
-            </div>
-          </div>
-
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-          <div
-            className="-mt-3 mx-[4.7rem]"
-            style={{
-              background:
-                "radial-gradient(ellipse, rgba(50,50,50,0.7) 0%, rgba(120,120,120,0.5) 35%, rgba(125,125,125,0.2) 50%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%)",
-              width: "100px",
-              height: "16px",
-            }}
-          />
-        </div>
-
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
-          <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
-            <div
-              className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
-              style={{
-                background:
-                  "radial-gradient(ellipse, rgba(241, 229, 216, 0) 0%, rgba(224, 204, 186, 0.2) 52%, rgba(210, 190, 175, 0.4) 55%, rgba(180, 160, 145, 0.65) 62%, rgba(241, 229, 216, 0) 63%, rgba(241, 229, 216, 0) 100%)",
-              }}
-            >
-              04
-            </div>
-          </div>
-
-          <div
-            className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
-          />
-
-          <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
-            <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Research Translation and Visibility</h2>
-              <p className="pt-1 text-sm">
-                Transforming research artifacts into structured learning experiences that increase visibility, understanding, and real world relevance.
-              </p>
-            </div>
-          </div>
-
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-          <div
-            className="-mt-3 mx-[4.7rem]"
-            style={{
-              background:
-                "radial-gradient(ellipse, rgba(50,50,50,0.7) 0%, rgba(120,120,120,0.5) 35%, rgba(125,125,125,0.2) 50%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%)",
-              width: "100px",
-              height: "16px",
-            }}
-          />
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center justify-center mt-16">
-        <a
-          href="https://medaistudio.moodlecloud.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-orange text-white uppercase text-xs md:text-sm font-bold tracking-wide px-5 sm:px-8 md:px-12 lg:px-16 py-3 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
-        >
-          Access Learning Platform
-        </a>
-
-        <p className="text-brown text-sm md:text-base mt-4 max-w-2xl text-center px-6">
-          CME accreditation is currently in progress. Offerings include CME and non CME courses, artifact grounded learning modules, and research translation.
-        </p>
       </div>
     </div>
   );
 };
 
-export default Offers;
+export default Offerings;
