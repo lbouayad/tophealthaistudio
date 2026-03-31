@@ -25,7 +25,7 @@ const offerings = [
     number: "04",
     title: "Research Translation and Visibility",
     description:
-      "Turning research artifacts into usable, decision relevant knowledge.",
+      "Making evaluated innovation understandable and usable for real world clinical and operational decision making.",
   },
 ];
 
@@ -49,9 +49,11 @@ const Offerings = () => {
               <div className="text-lightBrown font-bold text-xl mb-3">
                 {item.number}
               </div>
+
               <h2 className="text-xl md:text-2xl font-semibold mb-3">
                 {item.title}
               </h2>
+
               <p className="text-white/85 text-base md:text-lg leading-relaxed">
                 {item.description}
               </p>
@@ -69,9 +71,9 @@ const Offerings = () => {
           </Link>
 
           <p className="mt-4 text-white/80 text-center lg:text-left max-w-3xl">
-            CME accreditation is currently in progress. Offerings include CME
-            and non CME courses, artifact grounded learning modules, and
-            research translation.
+            CME accreditation in progress. Courses are designed for providers,
+            caregivers, and researchers using evaluated artifacts and real
+            world scenarios.
           </p>
         </div>
       </div>
