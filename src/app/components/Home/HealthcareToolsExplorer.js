@@ -12,7 +12,6 @@ import {
 import { Badge } from "@/components/ui/badge";
 import {
   Shield,
-  Scale,
   MessageCircle,
   ClipboardCheck,
   FileText,
@@ -27,7 +26,7 @@ const learningArtifacts = [
     type: "Artifact",
     moduleType: "Learning module",
     description:
-      "Reimagines how safety systems can support young adults with autism without compromising dignity or autonomy. Instead of relying on constant supervision or generic alerts, this artifact explores how familiar voice interactions can preserve privacy while still enabling timely response in high risk situations. For caregivers, this raises the question of how to support safety without increasing dependence. For providers, it highlights how design choices directly shape compliance, trust, and real world outcomes. This module focuses on designing for safety in ways that respect how individuals perceive and respond to their environment.",
+      "Reimagines how safety systems support young adults with autism without compromising autonomy. Uses familiar voice interaction to preserve privacy while enabling timely response.",
     icon: Shield,
     category: "Neurodevelopment",
     focus: "Safety",
@@ -41,7 +40,7 @@ const learningArtifacts = [
     type: "Prototype",
     moduleType: "Learning module",
     description:
-      "Examines how communication shapes patient decisions, especially when symptoms are unclear or evolving. Rather than focusing on what information is delivered, this artifact explores how it is delivered, and how that affects trust, understanding, and action. For patients, this determines whether they feel safe to wait or seek care. For providers, it highlights how communication design influences risk detection and timing. This module treats communication as a clinical intervention, not just an exchange of information.",
+      "Examines how communication affects patient decisions under uncertainty, including timing of care seeking, trust, and risk detection.",
     icon: MessageCircle,
     category: "Clinical Care",
     focus: "Communication",
@@ -55,7 +54,7 @@ const learningArtifacts = [
     type: "Prototype",
     moduleType: "Learning module",
     description:
-      "Explores how decisions are made about whether a patient is ready to proceed with care, and where those boundaries should exist. This artifact focuses on how incomplete information or poorly defined thresholds can lead to delays, cancellations, or unsafe progression. For providers, it highlights how decision boundaries shape both safety and efficiency. For patients, it determines whether care proceeds smoothly or becomes fragmented. This module examines readiness as a design problem, not just a checklist.",
+      "Explores how readiness decisions are made, focusing on incomplete information, unsafe progression, and delays in care.",
     icon: ClipboardCheck,
     category: "Clinical Operations",
     focus: "Readiness",
@@ -69,7 +68,7 @@ const learningArtifacts = [
     type: "Artifact",
     moduleType: "Learning module",
     description:
-      "Examines how clinical encounters are translated into documentation, and what is lost, altered, or over interpreted in that process. This artifact focuses on the tension between efficiency and accuracy, and how representation of a patient’s story affects future care. For providers, it raises questions about responsibility and legal risk. For patients, it affects how their condition is understood over time. This module explores documentation as a representation problem, not just a record keeping task.",
+      "Examines how clinical encounters are translated into documentation, including accuracy, overinterpretation risk, and long term impact on care.",
     icon: FileText,
     category: "Documentation",
     focus: "Integrity",
@@ -83,7 +82,7 @@ const learningArtifacts = [
     type: "Prototype",
     moduleType: "Learning module",
     description:
-      "Explores how care continues beyond the initial interaction, and why many patients disengage despite clear recommendations. This artifact focuses on timing, relevance, and perceived value in follow up interactions. For patients, this determines whether care feels supportive or overwhelming. For providers, it affects outcomes, adherence, and continuity. This module examines continuity as an active design challenge, not a passive process.",
+      "Explores why patients disengage despite recommendations, focusing on timing, relevance, and continuity of care.",
     icon: RefreshCw,
     category: "Care Continuity",
     focus: "Follow Up",
@@ -158,29 +157,18 @@ export function HealthcareToolsExplorer() {
         </h2>
 
         <p className="text-muted-foreground mb-4 max-w-4xl">
-          These learning modules are derived from prototypes developed and
-          evaluated on Applina.
+          These modules are derived from artifacts evaluated after real world
+          use.
         </p>
 
         <p className="text-muted-foreground mb-4 max-w-4xl">
-          They are used within courses and structured evaluation exercises to
-          examine how AI behaves in realistic scenarios, identify limitations,
-          and assess real world relevance.
+          They are designed for providers and caregivers responsible for care
+          decisions.
         </p>
 
-        <p className="text-muted-foreground mb-4 max-w-4xl">
-          Each module is grounded in an underlying artifact and designed to
-          teach concepts, frameworks, and implementation considerations through
-          direct interaction with evaluated systems.
-        </p>
-
-        <p className="text-muted-foreground mb-4 max-w-4xl">
-          They are not clinical tools and are not intended to replace
-          professional judgment.
-        </p>
-
-        <p className="text-foreground font-medium mb-8 max-w-4xl">
-          To explore or build new prototypes, visit Applina.
+        <p className="text-muted-foreground mb-8 max-w-4xl">
+          Each module examines system behavior, limitations, safety impact, and
+          workflow fit in realistic scenarios.
         </p>
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-8">
