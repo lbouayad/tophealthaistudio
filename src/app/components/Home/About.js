@@ -20,34 +20,42 @@ const About = () => {
         </h1>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Top Health AI Studio is an independent education and research initiative advancing responsible artificial intelligence implementation in clinical care.
+          Top Health AI Studio is an independent education and research
+          initiative focused on responsible AI use in clinical care.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Prototypes are built and evaluated on Applina, our platform for publishing and testing health AI artifacts in realistic scenarios. The Studio transforms these artifacts into structured education, research, and applied learning.
+          We evaluate artifacts used in real environments and translate them
+          into structured learning for providers, caregivers, and researchers.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          We develop and teach methods to evaluate AI systems in real world environments, with emphasis on clinical accountability, workflow integrity, explainability, and implementation feasibility.
+          Our approach is prototype based. Real systems are used to teach what
+          works, what fails, where risk emerges, and what is safe to advance in
+          practice.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Our approach is prototype based. Real evaluated artifacts are used to teach concepts, frameworks, and decision making, rather than abstract examples or vendor tools.
-        </p>
-
-        <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Through courses, artifact grounded learning, and interdisciplinary collaboration, we support clinicians, researchers, and institutions in translating innovation into evidence aligned and operationally sound practice.
+          Through artifact grounded learning and interdisciplinary
+          collaboration, we support clinically accountable and operationally
+          sound decision making.
         </p>
       </div>
 
       <div className="md:w-1/2 w-full relative flex items-center justify-center gap-x-4 md:pt-0 pt-16">
-        <div className="">
+        <div>
           <div
             data-aos="fade-down"
             data-aos-duration="1200"
             className="bg-lightBrown rounded-full overflow-hidden w-28 flex items-center justify-center"
           >
-            <Image src={"/About1.jpg"} width={200} height={200} alt="image" className="h-60 w-auto object-cover object-center" />
+            <Image
+              src="/About1.jpg"
+              width={200}
+              height={200}
+              alt="About image 1"
+              className="h-60 w-auto object-cover object-center"
+            />
           </div>
 
           <div
@@ -55,17 +63,29 @@ const About = () => {
             data-aos-duration="1200"
             className="bg-lightBrown rounded-full overflow-hidden w-24 h-24 flex items-center justify-center mt-4"
           >
-            <Image src={"/About2.png"} width={200} height={200} alt="image" className="h-24 w-full object-cover object-center" />
+            <Image
+              src="/About2.png"
+              width={200}
+              height={200}
+              alt="About image 2"
+              className="h-24 w-full object-cover object-center"
+            />
           </div>
         </div>
 
-        <div className="">
+        <div>
           <div
             data-aos="fade-down"
             data-aos-duration="1200"
             className="bg-blue rounded-full overflow-hidden w-24 h-24 pt-2 flex items-center justify-center"
           >
-            <Image src={"/About3.png"} width={200} height={200} alt="image" className="h-24 w-auto object-cover object-center" />
+            <Image
+              src="/About3.png"
+              width={200}
+              height={200}
+              alt="About image 3"
+              className="h-24 w-auto object-cover object-center"
+            />
           </div>
 
           <div
@@ -73,17 +93,29 @@ const About = () => {
             data-aos-duration="1200"
             className="bg-blue rounded-full overflow-hidden w-28 pt-6 flex items-center justify-center mt-4"
           >
-            <Image src={"/About4.jpg"} width={200} height={200} alt="image" className="h-56 w-auto object-cover object-center" />
+            <Image
+              src="/About4.jpg"
+              width={200}
+              height={200}
+              alt="About image 4"
+              className="h-56 w-auto object-cover object-center"
+            />
           </div>
         </div>
 
-        <div className="">
+        <div>
           <div
             data-aos="fade-up"
             data-aos-duration="1200"
             className="bg-lightBrown rounded-full overflow-hidden w-28 flex items-center justify-center"
           >
-            <Image src={"/About5.jpg"} width={200} height={200} alt="image" className="h-56 w-auto object-cover object-center" />
+            <Image
+              src="/About5.jpg"
+              width={200}
+              height={200}
+              alt="About image 5"
+              className="h-56 w-auto object-cover object-center"
+            />
           </div>
         </div>
       </div>
