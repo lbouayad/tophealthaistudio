@@ -16,6 +16,11 @@ const EnrollmentSteps = () => {
       id="enrollment"
       className="w-full items-center justify-center flex flex-col text-center pt-16 pb-28 relative xl:px-0 lg:px-16 sm:px-8 px-4 z-20 bg-lightBrown"
     >
+      <h1 className="mainHeading text-brown uppercase">How It Works</h1>
+      <h1 className="mainHeading text-brown">
+        Structured Validation Through Training, Observation, and Iteration
+      </h1>
+
       <h1 className="mainHeading text-brown uppercase">Enrollment</h1>
       <h1 className="mainHeading text-brown">
         Steps Guided by Purpose, Rigor, and Clinical Responsibility
