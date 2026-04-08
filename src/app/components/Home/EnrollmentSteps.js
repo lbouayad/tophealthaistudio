@@ -21,15 +21,16 @@ const EnrollmentSteps = () => {
         Structured Validation Through Training, Observation, and Iteration
       </h1>
 
-      <h1 className="mainHeading text-brown uppercase">Enrollment</h1>
-      <h1 className="mainHeading text-brown">
-        Steps Guided by Purpose, Rigor, and Clinical Responsibility
-      </h1>
-
       <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-20 lg:gap-y-0 gap-y-20 items-center justify-center pt-24 relative">
         <div className="relative group">
-          <UpperCurve className={"absolute sm:-top-6 sm:-left-6 left-14 top-14 sm:rotate-0 rotate-90"} />
-          <div data-aos="zoom-in" data-aos-duration="1000"
+          <UpperCurve
+            className={
+              "absolute sm:-top-6 sm:-left-6 left-14 top-14 sm:rotate-0 rotate-90"
+            }
+          />
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
             className="bg-brown text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
           >
             <h2 className="text-3xl">01</h2>
@@ -38,16 +39,22 @@ const EnrollmentSteps = () => {
               <br />
               Prototypes
             </h2>
-              
           </div>
           <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-             Review healthcare prototypes and validation opportunities aligned to real care workflows and implementation questionsstions
+            Review healthcare prototypes and validation opportunities aligned to
+            real care workflows and implementation questions
           </div>
         </div>
 
         <div className="relative group">
-          <BottomCurve className={"absolute sm:-bottom-6 sm:-left-6 -left-28 bottom-12 sm:rotate-0 rotate-90"} />
-          <div data-aos="zoom-in" data-aos-duration="1000"
+          <BottomCurve
+            className={
+              "absolute sm:-bottom-6 sm:-left-6 -left-28 bottom-12 sm:rotate-0 rotate-90"
+            }
+          />
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
             className="bg-orange text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
           >
             <h2 className="text-3xl">02</h2>
@@ -56,36 +63,59 @@ const EnrollmentSteps = () => {
               <br />
               Program
             </h2>
-              
           </div>
           <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Indicate whether you are joining as a CareFlow Shadower, provider partner, or startup seeking structured validationspecific artifact
+            Indicate whether you are joining as a CareFlow Shadower, provider
+            partner, or startup seeking structured validation
           </div>
         </div>
 
         <div className="relative group">
-          <UpperCurve className={"absolute sm:-top-6 sm:-left-6 left-14 top-14 sm:rotate-0 rotate-90"} />
-          <div data-aos="zoom-in" data-aos-duration="1000"
+          <UpperCurve
+            className={
+              "absolute sm:-top-6 sm:-left-6 left-14 top-14 sm:rotate-0 rotate-90"
+            }
+          />
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
             className="bg-brown text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
           >
             <h2 className="text-3xl">03</h2>
-            <h2 className="text-xl pt-2">Complete<br />Training</h2>
+            <h2 className="text-xl pt-2">
+              Complete
+              <br />
+              Training
+            </h2>
           </div>
           <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Students complete pre-shadowing training to learn workflow observation, prototype context, and structured evaluation methods
+            Students complete pre-shadowing training to learn workflow
+            observation, prototype context, and structured evaluation methods
           </div>
         </div>
 
         <div className="relative group">
-          <BottomCurve className={"absolute sm:-bottom-6 sm:-left-6 -left-28 bottom-12 sm:rotate-0 rotate-90"} />
-          <div data-aos="zoom-in" data-aos-duration="1000"
+          <BottomCurve
+            className={
+              "absolute sm:-bottom-6 sm:-left-6 -left-28 bottom-12 sm:rotate-0 rotate-90"
+            }
+          />
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
             className="bg-orange text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
           >
             <h2 className="text-3xl">04</h2>
-            <h2 className="text-xl pt-2">Observe<br />and Report</h2>
+            <h2 className="text-xl pt-2">
+              Observe
+              <br />
+              and Report
+            </h2>
           </div>
           <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            CareFlow Shadowers observe how prototypes perform in practice and generate structured validation reports to guide iteration before broader deployment
+            CareFlow Shadowers observe how prototypes perform in practice and
+            generate structured validation reports to guide iteration before
+            broader deployment
           </div>
         </div>
       </div>
@@ -101,7 +131,9 @@ const EnrollmentSteps = () => {
         </a>
 
         <p className="text-brown/80 text-sm md:text-base mt-4 max-w-2xl text-center px-6">
-          CME programming helps build the provider network, while student training supports CareFlow Shadowing and structured prototype validation.
+          CME programming helps build the provider network, while student
+          training supports CareFlow Shadowing and structured prototype
+          validation.
         </p>
       </div>
     </div>
