@@ -36,8 +36,9 @@ const EnrollmentSteps = () => {
             <h2 className="text-xl pt-2">
               Explore
               <br />
-              Programs
+              Prototypes
             </h2>
+              
           </div>
           <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             Review prototype based courses, learning modules, and evaluation frameworks aligned to real world implementation questions
