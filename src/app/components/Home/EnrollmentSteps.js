@@ -82,11 +82,7 @@ const EnrollmentSteps = () => {
             className="bg-orange text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
           >
             <h2 className="text-3xl">04</h2>
-            <h2 className="text-xl pt-2">
-              Apply
-              <br />
-              and Evaluate
-            </h2>
+            <h2 className="text-xl pt-2">Observe<br />and Report</h2>
           </div>
           <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
             Use evaluated prototypes and structured learning to understand what is worth advancing before data collection, partnerships, or deployment
