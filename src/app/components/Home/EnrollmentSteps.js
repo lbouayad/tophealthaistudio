@@ -85,7 +85,7 @@ const EnrollmentSteps = () => {
             <h2 className="text-xl pt-2">Observe<br />and Report</h2>
           </div>
           <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Use evaluated prototypes and structured learning to understand what is worth advancing before data collection, partnerships, or deployment
+            CareFlow Shadowers observe how prototypes perform in practice and generate structured validation reports to guide iteration before broader deployment
           </div>
         </div>
       </div>
