@@ -20,19 +20,26 @@ const About = () => {
         </h1>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Top Health AI Studio is an independent education and validation initiative focused on responsible AI use in clinical care.
+          Top Health AI Studio is an independent education and validation
+          initiative focused on responsible AI use in clinical care.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Through Applina, health and wellness prototypes can be evaluated not only in simulation, but through real-world workflow observation and structured feedback.
+          Through Applina, health and wellness prototypes can be evaluated not
+          only in simulation, but through real-world workflow observation and
+          structured feedback.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Students are trained through CareFlow Shadowing to observe how prototypes perform in practice and generate structured validation insights across patient, caregiver, and provider journeys.
+          Students are trained through CareFlow Shadowing to observe how
+          prototypes perform in practice and generate structured validation
+          insights across patient, caregiver, and provider journeys.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Our approach helps startups and care teams identify workflow friction, failure modes, and practical opportunities for refinement before broader deployment.
+          Our approach helps startups and care teams identify workflow friction,
+          failure modes, and practical opportunities for refinement before
+          broader deployment.
         </p>
       </div>
 
