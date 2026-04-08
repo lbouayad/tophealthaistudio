@@ -72,7 +72,7 @@ const EnrollmentSteps = () => {
             <h2 className="text-xl pt-2">Complete<br />Training</h2>
           </div>
           <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Learn expectations, evaluation methods, artifact context, and the principles that will guide structured learning
+            Students complete pre-shadowing training to learn workflow observation, prototype context, and structured evaluation methods
           </div>
         </div>
 
