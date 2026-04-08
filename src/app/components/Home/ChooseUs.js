@@ -33,7 +33,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaStar className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Responsible by Design</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Real World Validation</h2>
                     </div>
                     <div className='w-28 border-t-2 border-t-lightBrown absolute rotate-[56deg] top-[6.84rem] left-[15rem] lg:block hidden' />
                 </div>
