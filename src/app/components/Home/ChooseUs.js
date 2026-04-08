@@ -95,7 +95,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaStar className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Responsible by Design</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Real World Validation</h2>
                     </div>
                 </div>
 
@@ -104,7 +104,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaRobot className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Artifact Grounded Learning</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>CareFlow Shadowing</h2>
                     </div>
                 </div>
 
@@ -113,7 +113,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaSearch className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Structured Evaluation Methods</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Structured Validation Reports</h2>
                     </div>
                 </div>
 
@@ -126,7 +126,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaTools className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Workflow and Safety Focused</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Workflow Fit and Friction</h2>
                     </div>
                 </div>
 
@@ -135,7 +135,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <FaChartBar className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Implementation Readiness</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Startup Ready Insights</h2>
                     </div>
                 </div>
 
@@ -144,7 +144,7 @@ const ChooseUs = () => {
                         <div className='bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white'>
                             <LuHandshake className='text-3xl text-brown' />
                         </div>
-                        <h2 className='text-white w-2/3 text-lg font-bold'>Research Visibility and Translation</h2>
+                        <h2 className='text-white w-2/3 text-lg font-bold'>Provider Grounded Feedback</h2>
                     </div>
                 </div>
             </div>
