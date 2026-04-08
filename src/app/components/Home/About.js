@@ -20,25 +20,19 @@ const About = () => {
         </h1>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Top Health AI Studio is an independent education and research
-          initiative focused on responsible AI use in clinical care.
+          Top Health AI Studio is an independent education and validation initiative focused on responsible AI use in clinical care.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          We evaluate artifacts used in real environments and translate them
-          into structured learning for providers, caregivers, and researchers.
+          Through Applina, health and wellness prototypes can be evaluated not only in simulation, but through real-world workflow observation and structured feedback.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Our approach is prototype based. Real systems are used to teach what
-          works, what fails, where risk emerges, and what is safe to advance in
-          practice.
+          Students are trained through CareFlow Shadowing to observe how prototypes perform in practice and generate structured validation insights across patient, caregiver, and provider journeys.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Through artifact grounded learning and interdisciplinary
-          collaboration, we support clinically accountable and operationally
-          sound decision making.
+          Our approach helps startups and care teams identify workflow friction, failure modes, and practical opportunities for refinement before broader deployment.
         </p>
       </div>
 
