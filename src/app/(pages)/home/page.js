@@ -5,6 +5,7 @@ import ChooseUs from "@/app/components/Home/ChooseUs";
 import EnrollmentSteps from "@/app/components/Home/EnrollmentSteps";
 import HeroSection from "@/app/components/Home/HeroSection";
 import Offerings from "@/app/components/Home/Offerings";
+import SampleUseCase from "@/app/components/Home/SampleUseCase";
 import Stats from "@/app/components/Home/Stats";
 import { HealthcareToolsExplorer } from "@/app/components/Home/HealthcareToolsExplorer";
 
@@ -18,6 +19,7 @@ const page = () => {
       <EnrollmentSteps />
       <ChooseUs />
       <Offerings />
+      <SampleUseCase />
       <Stats />
     </>
   );
