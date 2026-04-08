@@ -21,25 +21,20 @@ const HeroSection = () => {
 
             <div className="space-y-5 max-w-4xl mx-auto">
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed font-medium">
-                Advancing clinically defensible AI through evaluation and
-                prototype based education.
+                The AI research, training, and validation layer for health innovation.
               </p>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed">
-                Artifacts from research and applied design are evaluated based
-                on real world use, then translated into structured learning.
+                Top Health AI Studio trains students through CareFlow Shadowing to evaluate how real prototypes perform across patient, caregiver, and provider workflows.
               </p>
 
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 font-semibold leading-relaxed">
-                Not vendor training. Designed for those responsible for care
-                decisions.
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed">
+                Through Applina, startups can pressure test workflow fit, surface friction, and refine healthcare solutions before broader deployment.
               </p>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed">
-                Built for providers, caregivers, and researchers. Informed by
-                real patient experience.
+                Built for providers, caregivers, researchers, startups, and the next generation of healthcare innovators.
               </p>
-            </div>
           </div>
 
           <div className="z-20 mt-10 md:mt-12">
