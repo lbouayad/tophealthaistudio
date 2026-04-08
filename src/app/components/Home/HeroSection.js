@@ -43,7 +43,7 @@ const HeroSection = () => {
               target="_blank"
               className="inline-flex items-center justify-center bg-orange text-white uppercase text-xs sm:text-sm md:text-base font-bold tracking-wide px-8 sm:px-10 md:px-14 py-4 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
             >
-              Access Courses
+              Access Training
             </Link>
           </div>
         </div>
