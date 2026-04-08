@@ -101,7 +101,7 @@ const EnrollmentSteps = () => {
         </a>
 
         <p className="text-brown/80 text-sm md:text-base mt-4 max-w-2xl text-center px-6">
-          CME accreditation is currently in progress. Course access and participation are available through our learning platform alongside non CME offerings and artifact grounded learning modules.
+          CME programming helps build the provider network, while student training supports CareFlow Shadowing and structured prototype validation.
         </p>
       </div>
     </div>
