@@ -9,11 +9,18 @@ const Offers = () => {
   }, []);
 
   return (
-    <div id="offerings" className="w-full flex flex-col justify-center bg-brown text-center lg:py-24 py-16 overflow-hidden relative z-20">
+    <div
+      id="offerings"
+      className="w-full flex flex-col justify-center bg-brown text-center lg:py-24 py-16 overflow-hidden relative z-20"
+    >
       <h1 className="mainHeading text-lightBrown uppercase">Offerings</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 lg:gap-y-0 gap-y-10 py-14 relative z-10 px-6 xl:px-20">
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
+        >
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -28,14 +35,17 @@ const Offers = () => {
 
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
+            style={{
+              background: "linear-gradient(to bottom, #33333399, transparent)",
+            }}
           />
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Prototype Based Health AI Courses</h2>
+              <h2 className="font-bold text-lg">CareFlow Shadower Training</h2>
               <p className="pt-1 text-sm">
-                Structured learning grounded in evaluated artifacts. Focused on clinical AI, evaluation, and implementation.
+                Structured training that prepares students to observe prototypes
+                in real care workflows and generate useful validation insights.
               </p>
             </div>
           </div>
@@ -52,7 +62,11 @@ const Offers = () => {
           />
         </div>
 
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-0 mt-0">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-0 mt-0"
+        >
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -67,14 +81,20 @@ const Offers = () => {
 
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
+            style={{
+              background: "linear-gradient(to bottom, #33333399, transparent)",
+            }}
           />
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Artifact Based Learning and Evaluation</h2>
+              <h2 className="font-bold text-lg">
+                Prototype Validation for Startups
+              </h2>
               <p className="pt-1 text-sm">
-                Direct interaction with evaluated systems to understand behavior, limitations, and real world constraints.
+                Real-world evaluation of healthcare prototypes to identify
+                usability gaps, workflow friction, and opportunities for
+                refinement before scaling.
               </p>
             </div>
           </div>
@@ -91,7 +111,11 @@ const Offers = () => {
           />
         </div>
 
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
+        >
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -106,14 +130,20 @@ const Offers = () => {
 
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
+            style={{
+              background: "linear-gradient(to bottom, #33333399, transparent)",
+            }}
           />
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Evaluation Frameworks</h2>
+              <h2 className="font-bold text-lg">
+                Structured Validation Reports
+              </h2>
               <p className="pt-1 text-sm">
-                Methods to assess clinical risk, operational impact, and implementation readiness.
+                Reports synthesize patient, caregiver, and provider observations
+                into workflow findings, failure modes, and actionable
+                recommendations.
               </p>
             </div>
           </div>
@@ -130,7 +160,11 @@ const Offers = () => {
           />
         </div>
 
-        <div data-aos="zoom-in" data-aos-duration="1200" className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0">
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="1200"
+          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
+        >
           <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
             <div
               className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
@@ -145,14 +179,18 @@ const Offers = () => {
 
           <div
             className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{ background: "linear-gradient(to bottom, #33333399, transparent)" }}
+            style={{
+              background: "linear-gradient(to bottom, #33333399, transparent)",
+            }}
           />
 
           <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
             <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Research Translation and Visibility</h2>
+              <h2 className="font-bold text-lg">Provider and CME Network</h2>
               <p className="pt-1 text-sm">
-                Making evaluated innovation understandable and usable for real world clinical and operational decision making.
+                CME and education pathways help build a provider network that
+                supports grounded evaluation of healthcare innovation in real
+                settings.
               </p>
             </div>
           </div>
@@ -181,7 +219,9 @@ const Offers = () => {
         </a>
 
         <p className="text-brown text-sm md:text-base mt-4 max-w-2xl text-center px-6">
-          CME accreditation is currently in progress. Offerings include CME and non CME courses, artifact grounded learning modules, and research translation.
+          Offerings support three sides of the model: provider participation
+          through CME, student training through CareFlow Shadowing, and startup
+          validation through Applina.
         </p>
       </div>
     </div>
