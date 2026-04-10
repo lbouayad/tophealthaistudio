@@ -1,9 +1,34 @@
 "use client";
 import React, { useEffect } from "react";
-import UpperCurve from "../Svgs/UpperCurve";
-import BottomCurve from "../Svgs/BottomCurve";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
+const steps = [
+  {
+    number: "01",
+    title: "Explore Prototypes",
+    description:
+      "Review healthcare systems and validation opportunities aligned to real care workflows and implementation questions.",
+  },
+  {
+    number: "02",
+    title: "Request Access",
+    description:
+      "Create your account and confirm whether you are submitting an AI tool or joining as a clinical site.",
+  },
+  {
+    number: "03",
+    title: "Evaluate and Refine",
+    description:
+      "Test your system in structured scenarios and identify workflow gaps, communication issues, and decision boundaries.",
+  },
+  {
+    number: "04",
+    title: "Extend to Real World Validation",
+    description:
+      "Selected systems are observed in active care workflows to generate structured validation insights before broader deployment.",
+  },
+];
 
 const EnrollmentSteps = () => {
   useEffect(() => {
@@ -18,123 +43,24 @@ const EnrollmentSteps = () => {
     >
       <h1 className="mainHeading text-brown uppercase">How It Works</h1>
       <h1 className="mainHeading text-brown">
-        Structured Validation Through Training, Observation, and Iteration
+        Structured Validation Through Review, Testing, and Real World Observation
       </h1>
 
-      <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-20 lg:gap-y-0 gap-y-20 items-center justify-center pt-24 relative">
-        <div className="relative group">
-          <UpperCurve
-            className={
-              "absolute sm:-top-6 sm:-left-6 left-14 top-14 sm:rotate-0 rotate-90"
-            }
-          />
+      <div className="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8 items-stretch justify-center pt-16 max-w-7xl w-full">
+        {steps.map((step, index) => (
           <div
+            key={step.number}
             data-aos="zoom-in"
-            data-aos-duration="1000"
-            className="bg-brown text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
+            data-aos-duration={1000 + index * 100}
+            className="bg-brown text-lightBrown rounded-[2rem] px-6 py-8 shadow-lg flex flex-col items-center text-center min-h-[260px]"
           >
-            <h2 className="text-3xl">01</h2>
-            <h2 className="text-xl pt-2">
-              Explore
-              <br />
-              Prototypes
-            </h2>
+            <div className="w-20 h-20 rounded-full bg-lightBrown text-brown flex items-center justify-center text-3xl font-bold mb-6">
+              {step.number}
+            </div>
+            <h2 className="font-bold text-xl mb-3">{step.title}</h2>
+            <p className="text-sm leading-6">{step.description}</p>
           </div>
-          <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Review healthcare prototypes and validation opportunities aligned to
-            real care workflows and implementation questions
-          </div>
-        </div>
-
-        <div className="relative group">
-          <BottomCurve
-            className={
-              "absolute sm:-bottom-6 sm:-left-6 -left-28 bottom-12 sm:rotate-0 rotate-90"
-            }
-          />
-          <div
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            className="bg-orange text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
-          >
-            <h2 className="text-3xl">02</h2>
-            <h2 className="text-xl pt-2">
-              Join the
-              <br />
-              Program
-            </h2>
-          </div>
-          <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Indicate whether you are joining as a CareFlow Shadower, provider
-            partner, or startup seeking structured validation
-          </div>
-        </div>
-
-        <div className="relative group">
-          <UpperCurve
-            className={
-              "absolute sm:-top-6 sm:-left-6 left-14 top-14 sm:rotate-0 rotate-90"
-            }
-          />
-          <div
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            className="bg-brown text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
-          >
-            <h2 className="text-3xl">03</h2>
-            <h2 className="text-xl pt-2">
-              Complete
-              <br />
-              Training
-            </h2>
-          </div>
-          <div className="absolute z-10 bottom-full !-bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-brown rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            Students complete pre-shadowing training to learn workflow
-            observation, prototype context, and structured evaluation methods
-          </div>
-        </div>
-
-        <div className="relative group">
-          <BottomCurve
-            className={
-              "absolute sm:-bottom-6 sm:-left-6 -left-28 bottom-12 sm:rotate-0 rotate-90"
-            }
-          />
-          <div
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-            className="bg-orange text-lightBrown border-[0.6rem] h-48 w-48 flex flex-col items-center justify-center border-white font-bold rounded-full"
-          >
-            <h2 className="text-3xl">04</h2>
-            <h2 className="text-xl pt-2">
-              Observe
-              <br />
-              and Report
-            </h2>
-          </div>
-          <div className="absolute z-10 sm:bottom-full -bottom-[4.6rem] left-1/2 transform -translate-x-1/2 mb-2 w-56 p-2 text-sm text-white bg-orange rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            CareFlow Shadowers observe how prototypes perform in practice and
-            generate structured validation reports to guide iteration before
-            broader deployment
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center justify-center mt-24">
-        <a
-          href="https://medaistudio.moodlecloud.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-orange text-white uppercase text-sm md:text-md font-bold tracking-wide px-6 sm:px-10 md:px-16 lg:px-20 py-4 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
-        >
-          Access Learning Platform
-        </a>
-
-        <p className="text-brown/80 text-sm md:text-base mt-4 max-w-2xl text-center px-6">
-          CME programming helps build the provider network, while student
-          training supports CareFlow Shadowing and structured prototype
-          validation.
-        </p>
+        ))}
       </div>
     </div>
   );
