@@ -2,230 +2,78 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
-const Offers = () => {
+const offerings = [
+  {
+    number: "01",
+    title: "Prototype Publishing",
+    description:
+      "Publish health and wellness AI systems in a structured environment designed for visibility, review, and early relevance testing.",
+  },
+  {
+    number: "02",
+    title: "Scenario Based Testing",
+    description:
+      "Explore how a system behaves in realistic communication and decision environments before real world validation.",
+  },
+  {
+    number: "03",
+    title: "Structured Validation",
+    description:
+      "Evaluate usefulness, context fit, workflow alignment, and practical viability alongside technical performance.",
+  },
+  {
+    number: "04",
+    title: "Clinical AI Validation",
+    description:
+      "Real world evaluation of healthcare AI systems in active care environments. Structured outputs include workflow findings, system limitations, and actionable recommendations.",
+  },
+];
+
+const Offerings = () => {
   useEffect(() => {
     Aos.init();
   }, []);
 
   return (
-    <div
-      id="offerings"
-      className="w-full flex flex-col justify-center bg-brown text-center lg:py-24 py-16 overflow-hidden relative z-20"
-    >
-      <h1 className="mainHeading text-lightBrown uppercase">Offerings</h1>
+    <div className="w-full items-center justify-center flex flex-col bg-offWhite text-brown pt-16 pb-20 px-6 lg:px-12">
+      <h1 className="mainHeading text-brown uppercase text-center">Offerings</h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 lg:gap-y-0 gap-y-10 py-14 relative z-10 px-6 xl:px-20">
-        <div
-          data-aos="zoom-in"
-          data-aos-duration="1200"
-          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
-        >
-          <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
-            <div
-              className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
-              style={{
-                background:
-                  "radial-gradient(ellipse, rgba(241, 229, 216, 0) 0%, rgba(224, 204, 186, 0.2) 52%, rgba(210, 190, 175, 0.4) 55%, rgba(180, 160, 145, 0.65) 62%, rgba(241, 229, 216, 0) 63%, rgba(241, 229, 216, 0) 100%)",
-              }}
-            >
-              01
-            </div>
-          </div>
-
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 pt-14 w-full max-w-7xl">
+        {offerings.map((item, index) => (
           <div
-            className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{
-              background: "linear-gradient(to bottom, #33333399, transparent)",
-            }}
-          />
-
-          <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
-            <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">CareFlow Shadower Training</h2>
-              <p className="pt-1 text-sm">
-                Structured training that prepares students to observe prototypes
-                in real care workflows and generate useful validation insights.
-              </p>
+            key={item.number}
+            data-aos="zoom-in"
+            data-aos-duration={1000 + index * 100}
+            className="bg-lightBrown rounded-[2rem] p-6 shadow-lg min-h-[280px] flex flex-col"
+          >
+            <div className="w-16 h-16 rounded-full bg-brown text-lightBrown flex items-center justify-center text-2xl font-bold mb-5">
+              {item.number}
             </div>
+            <h2 className="font-bold text-2xl mb-4">{item.title}</h2>
+            <p className="text-base leading-7">{item.description}</p>
           </div>
-
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-          <div
-            className="-mt-3 mx-[4.7rem]"
-            style={{
-              background:
-                "radial-gradient(ellipse, rgba(50,50,50,0.7) 0%, rgba(120,120,120,0.5) 35%, rgba(125,125,125,0.2) 50%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%)",
-              width: "100px",
-              height: "16px",
-            }}
-          />
-        </div>
-
-        <div
-          data-aos="zoom-in"
-          data-aos-duration="1200"
-          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-0 mt-0"
-        >
-          <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
-            <div
-              className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
-              style={{
-                background:
-                  "radial-gradient(ellipse, rgba(241, 229, 216, 0) 0%, rgba(224, 204, 186, 0.2) 52%, rgba(210, 190, 175, 0.4) 55%, rgba(180, 160, 145, 0.65) 62%, rgba(241, 229, 216, 0) 63%, rgba(241, 229, 216, 0) 100%)",
-              }}
-            >
-              02
-            </div>
-          </div>
-
-          <div
-            className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{
-              background: "linear-gradient(to bottom, #33333399, transparent)",
-            }}
-          />
-
-          <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
-            <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">
-                Prototype Validation for Startups
-              </h2>
-              <p className="pt-1 text-sm">
-                Real-world evaluation of healthcare prototypes to identify
-                usability gaps, workflow friction, and opportunities for
-                refinement before scaling.
-              </p>
-            </div>
-          </div>
-
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-          <div
-            className="-mt-3 mx-[4.7rem]"
-            style={{
-              background:
-                "radial-gradient(ellipse, rgba(50,50,50,0.7) 0%, rgba(120,120,120,0.5) 35%, rgba(125,125,125,0.2) 50%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%)",
-              width: "100px",
-              height: "16px",
-            }}
-          />
-        </div>
-
-        <div
-          data-aos="zoom-in"
-          data-aos-duration="1200"
-          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
-        >
-          <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
-            <div
-              className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
-              style={{
-                background:
-                  "radial-gradient(ellipse, rgba(241, 229, 216, 0) 0%, rgba(224, 204, 186, 0.2) 52%, rgba(210, 190, 175, 0.4) 55%, rgba(180, 160, 145, 0.65) 62%, rgba(241, 229, 216, 0) 63%, rgba(241, 229, 216, 0) 100%)",
-              }}
-            >
-              03
-            </div>
-          </div>
-
-          <div
-            className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{
-              background: "linear-gradient(to bottom, #33333399, transparent)",
-            }}
-          />
-
-          <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
-            <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">
-                Structured Validation Reports
-              </h2>
-              <p className="pt-1 text-sm">
-                Reports synthesize patient, caregiver, and provider observations
-                into workflow findings, failure modes, and actionable
-                recommendations.
-              </p>
-            </div>
-          </div>
-
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-          <div
-            className="-mt-3 mx-[4.7rem]"
-            style={{
-              background:
-                "radial-gradient(ellipse, rgba(50,50,50,0.7) 0%, rgba(120,120,120,0.5) 35%, rgba(125,125,125,0.2) 50%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%)",
-              width: "100px",
-              height: "16px",
-            }}
-          />
-        </div>
-
-        <div
-          data-aos="zoom-in"
-          data-aos-duration="1200"
-          className="w-56 bg-slate-200 text-white text-center mx-auto lg:mt-24 mt-0"
-        >
-          <div className="circle w-28 h-28 bg-brown rounded-full mx-auto z-20 relative translate-y-[2.2rem] translate-x-5">
-            <div
-              className="w-full h-full rounded-full flex justify-center items-center text-5xl font-semibold"
-              style={{
-                background:
-                  "radial-gradient(ellipse, rgba(241, 229, 216, 0) 0%, rgba(224, 204, 186, 0.2) 52%, rgba(210, 190, 175, 0.4) 55%, rgba(180, 160, 145, 0.65) 62%, rgba(241, 229, 216, 0) 63%, rgba(241, 229, 216, 0) 100%)",
-              }}
-            >
-              04
-            </div>
-          </div>
-
-          <div
-            className="w-24 h-28 absolute rounded-ss-[2.4rem] translate-x-[3.4rem] -translate-y-[4rem] rotate-[47deg]"
-            style={{
-              background: "linear-gradient(to bottom, #33333399, transparent)",
-            }}
-          />
-
-          <div className="w-0 h-52 z-10 mx-auto relative border-l-[15.6rem] border-l-lightBrown border-solid border-t-[0.6rem] border-t-transparent border-b-[0.6rem] border-b-transparent">
-            <div className="w-[13.2rem] h-full pt-12 translate-x-[-14.3rem] absolute overflow-hidden bg-lightBrown text-brown">
-              <h2 className="font-bold text-lg">Provider and CME Network</h2>
-              <p className="pt-1 text-sm">
-                CME and education pathways help build a provider network that
-                supports grounded evaluation of healthcare innovation in real
-                settings.
-              </p>
-            </div>
-          </div>
-
-          <div className="w-0 h-0 z-0 mx-auto relative border-l-[7.8rem] border-l-brown border-solid border-b-[3.4rem] border-b-transparent translate-x-[4.7rem] translate-y-[-0.6rem]" />
-          <div
-            className="-mt-3 mx-[4.7rem]"
-            style={{
-              background:
-                "radial-gradient(ellipse, rgba(50,50,50,0.7) 0%, rgba(120,120,120,0.5) 35%, rgba(125,125,125,0.2) 50%, rgba(255,255,255,0) 70%, rgba(255,255,255,0) 100%)",
-              width: "100px",
-              height: "16px",
-            }}
-          />
-        </div>
+        ))}
       </div>
 
-      <div className="flex flex-col items-center justify-center mt-16">
-        <a
-          href="https://medaistudio.moodlecloud.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-14">
+        <Link
+          href="#"
           className="bg-orange text-white uppercase text-xs md:text-sm font-bold tracking-wide px-5 sm:px-8 md:px-12 lg:px-16 py-3 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
         >
-          Access Learning Platform
-        </a>
+          Submit Your AI Tool for Real World Validation
+        </Link>
 
-        <p className="text-brown text-sm md:text-base mt-4 max-w-2xl text-center px-6">
-          Offerings support three sides of the model: provider participation
-          through CME, student training through CareFlow Shadowing, and startup
-          validation through Applina.
-        </p>
+        <Link
+          href="#"
+          className="border-2 border-orange text-orange uppercase text-xs md:text-sm font-bold tracking-wide px-5 sm:px-8 md:px-12 lg:px-16 py-3 rounded-3xl text-center hover:bg-orange hover:text-white transition duration-300 ease-in-out"
+        >
+          Join as a Clinical Site
+        </Link>
       </div>
     </div>
   );
 };
 
-export default Offers;
+export default Offerings;
