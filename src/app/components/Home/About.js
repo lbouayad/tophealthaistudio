@@ -20,26 +20,24 @@ const About = () => {
         </h1>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Top Health AI Studio is an independent education and validation
-          initiative focused on responsible AI use in clinical care.
+          Applina is the platform for publishing, testing, and validating
+          health and wellness AI systems before deployment.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Through Applina, health and wellness prototypes can be evaluated not
-          only in simulation, but through real-world workflow observation and
-          structured feedback.
+          Through Applina, systems are evaluated not only in simulation, but
+          through real world workflow observation and structured feedback in
+          active clinical settings.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Students are trained through CareFlow Shadowing to observe how
-          prototypes perform in practice and generate structured validation
-          insights across patient, caregiver, and provider journeys.
+          Our approach helps teams identify workflow friction, failure modes,
+          and practical opportunities for refinement before broader deployment.
         </p>
 
         <p className="text-brown text-base md:text-lg lg:text-lg xl:text-xl pt-4 text-justify md:px-0 sm:px-14 px-0">
-          Our approach helps startups and care teams identify workflow friction,
-          failure modes, and practical opportunities for refinement before
-          broader deployment.
+          The goal is simple. Ensure that systems are usable, safe, and
+          relevant in real care environments before they scale.
         </p>
       </div>
 
@@ -99,25 +97,23 @@ const About = () => {
               width={200}
               height={200}
               alt="About image 4"
-              className="h-56 w-auto object-cover object-center"
+              className="h-60 w-auto object-cover object-center"
             />
           </div>
         </div>
 
-        <div>
-          <div
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            className="bg-lightBrown rounded-full overflow-hidden w-28 flex items-center justify-center"
-          >
-            <Image
-              src="/About5.jpg"
-              width={200}
-              height={200}
-              alt="About image 5"
-              className="h-56 w-auto object-cover object-center"
-            />
-          </div>
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1200"
+          className="bg-lightBrown rounded-full overflow-hidden w-24 h-24 flex items-center justify-center"
+        >
+          <Image
+            src="/About5.jpg"
+            width={200}
+            height={200}
+            alt="About image 5"
+            className="h-24 w-full object-cover object-center"
+          />
         </div>
       </div>
     </div>
