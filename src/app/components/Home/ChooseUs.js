@@ -22,7 +22,7 @@ const ChooseUs = () => {
       className="w-full items-center justify-center flex flex-col pt-14 lg:pb-52 pb-20 relative overflow-hidden z-10"
     >
       <h1 className="mainHeading text-lightBrown uppercase text-center">
-        Why Top Health AI Studio
+        Why Choose Applina
       </h1>
 
       <div
@@ -33,7 +33,7 @@ const ChooseUs = () => {
       >
         <div className="w-56 h-56 rounded-full border-[0.3rem] border-lightBrown flex items-center justify-center">
           <Image
-            src={"/WhyChooseUs.png"}
+            src="/WhyChooseUs.png"
             width={500}
             height={500}
             alt="image"
@@ -41,116 +41,86 @@ const ChooseUs = () => {
           />
         </div>
 
-        <div className={`relative -left-[30.6rem] -top-[15.2rem]`}>
-          <div className={`${pillStyle}`}>
+        <div className="relative -left-[30.6rem] -top-[15.2rem]">
+          <div className={pillStyle}>
             <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
               <FaStar className="text-3xl text-brown" />
             </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Real World Validation
-            </h2>
+            <h2 className="text-white w-2/3 text-lg font-bold">Real World Validation</h2>
           </div>
           <div className="w-28 border-t-2 border-t-lightBrown absolute rotate-[56deg] top-[6.84rem] left-[15rem] lg:block hidden" />
         </div>
 
-        <div className={`relative -left-[2.8rem] -top-[15.2rem]`}>
-          <div className={`${pillStyle}`}>
+        <div className="relative -left-[2.8rem] -top-[15.2rem]">
+          <div className={pillStyle}>
             <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
               <FaRobot className="text-3xl text-brown" />
             </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              CareFlow Shadowing
-            </h2>
+            <h2 className="text-white w-2/3 text-lg font-bold">Structured Evaluation</h2>
           </div>
           <div className="w-28 border-t-2 border-t-lightBrown absolute -rotate-[56deg] top-[6.9rem] -left-[2.5rem] lg:block hidden" />
         </div>
 
-        <div className={`relative -left-[36.6rem] -top-[3rem]`}>
-          <div className={`${pillStyle}`}>
+        <div className="relative -left-[36.6rem] -top-[3rem]">
+          <div className={pillStyle}>
             <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
               <FaSearch className="text-3xl text-brown" />
             </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Structured Validation Reports
-            </h2>
+            <h2 className="text-white w-2/3 text-lg font-bold">Failure Mode Identification</h2>
           </div>
           <div className="w-20 border-t-2 border-t-lightBrown absolute top-[3rem] left-[18.3rem] z-20 lg:block hidden" />
         </div>
 
-        <div className={`relative left-[3rem] -top-[3rem]`}>
-          <div className={`${pillStyle}`}>
+        <div className="relative left-[3rem] -top-[3rem]">
+          <div className={pillStyle}>
             <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
               <FaTools className="text-3xl text-brown" />
             </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Workflow Fit and Friction
-            </h2>
+            <h2 className="text-white w-2/3 text-lg font-bold">Workflow Fit and Friction</h2>
           </div>
           <div className="w-20 border-t-2 border-t-lightBrown absolute top-[3rem] -left-[3.68rem] z-20 lg:block hidden" />
         </div>
 
-        <div className={`relative -left-[30.7rem] top-[9rem]`}>
-          <div className={`${pillStyle}`}>
+        <div className="relative -left-[30.7rem] top-[9rem]">
+          <div className={pillStyle}>
             <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
               <FaChartBar className="text-3xl text-brown" />
             </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Startup Ready Insights
-            </h2>
+            <h2 className="text-white w-2/3 text-lg font-bold">Actionable Insights for Iteration</h2>
           </div>
           <div className="w-24 border-t-2 border-t-lightBrown absolute -rotate-[56deg] -top-[0.6rem] left-[17rem] z-20 lg:block hidden" />
         </div>
 
-        <div className={`relative -left-[3rem] top-[9rem]`}>
-          <div className={`${pillStyle}`}>
+        <div className="relative -left-[3rem] top-[9rem]">
+          <div className={pillStyle}>
             <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
               <LuHandshake className="text-3xl text-brown" />
             </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Provider Grounded Feedback
-            </h2>
+            <h2 className="text-white w-2/3 text-lg font-bold">Grounded Feedback from Real Workflows</h2>
           </div>
           <div className="w-24 border-t-2 border-t-lightBrown absolute rotate-[56deg] -top-[1rem] -left-[2.4rem] z-20 lg:block hidden" />
         </div>
       </div>
 
       <div className="relative w-full max-w-[1525px] flex flex-col items-center justify-center lg:hidden">
-        <div className={`relative`}>
-          <div className={`${pillStyleSmall}`}>
-            <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
-              <FaStar className="text-3xl text-brown" />
+        {[
+          [FaStar, "Real World Validation"],
+          [FaRobot, "Structured Evaluation"],
+          [FaSearch, "Failure Mode Identification"],
+        ].map(([Icon, text]) => (
+          <div key={text} className="relative">
+            <div className={pillStyleSmall}>
+              <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
+                <Icon className="text-3xl text-brown" />
+              </div>
+              <h2 className="text-white w-2/3 text-lg font-bold">{text}</h2>
             </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Real World Validation
-            </h2>
           </div>
-        </div>
-
-        <div className={`relative`}>
-          <div className={`${pillStyleSmall}`}>
-            <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
-              <FaRobot className="text-3xl text-brown" />
-            </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              CareFlow Shadowing
-            </h2>
-          </div>
-        </div>
-
-        <div className={`relative`}>
-          <div className={`${pillStyleSmall}`}>
-            <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
-              <FaSearch className="text-3xl text-brown" />
-            </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Structured Validation Reports
-            </h2>
-          </div>
-        </div>
+        ))}
 
         <div className="w-56 h-56 rounded-full border-[0.3rem] border-lightBrown flex items-center justify-center mt-10">
           <Image
-            src={"/WhyChooseUs.png"}
+            src="/WhyChooseUs.png"
             width={500}
             height={500}
             alt="image"
@@ -158,38 +128,20 @@ const ChooseUs = () => {
           />
         </div>
 
-        <div className={`relative`}>
-          <div className={`${pillStyleSmall}`}>
-            <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
-              <FaTools className="text-3xl text-brown" />
+        {[
+          [FaTools, "Workflow Fit and Friction"],
+          [FaChartBar, "Actionable Insights for Iteration"],
+          [LuHandshake, "Grounded Feedback from Real Workflows"],
+        ].map(([Icon, text]) => (
+          <div key={text} className="relative">
+            <div className={pillStyleSmall}>
+              <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
+                <Icon className="text-3xl text-brown" />
+              </div>
+              <h2 className="text-white w-2/3 text-lg font-bold">{text}</h2>
             </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Workflow Fit and Friction
-            </h2>
           </div>
-        </div>
-
-        <div className={`relative`}>
-          <div className={`${pillStyleSmall}`}>
-            <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
-              <FaChartBar className="text-3xl text-brown" />
-            </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Startup Ready Insights
-            </h2>
-          </div>
-        </div>
-
-        <div className={`relative`}>
-          <div className={`${pillStyleSmall}`}>
-            <div className="bg-lightBrown flex items-center justify-center rounded-full w-16 h-16 border-[0.4rem] border-white">
-              <LuHandshake className="text-3xl text-brown" />
-            </div>
-            <h2 className="text-white w-2/3 text-lg font-bold">
-              Provider Grounded Feedback
-            </h2>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div className="animate-pulse lg:block hidden w-[28rem] h-[28rem] self-center top-44 rounded-full absolute border-[1.3rem] border-lightBrown" />
