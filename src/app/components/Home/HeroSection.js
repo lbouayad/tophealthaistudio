@@ -16,42 +16,57 @@ const HeroSection = () => {
             </h1>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide mb-8">
-              Top Health AI Studio
+              Applina
             </h2>
 
             <div className="space-y-5 max-w-4xl mx-auto">
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed font-medium">
-                The AI research, training, and validation layer for health
-                innovation.
+                The AI research and validation layer for real world healthcare.
               </p>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed">
-                Top Health AI Studio trains students through CareFlow Shadowing
-                to evaluate how real prototypes perform across patient,
-                caregiver, and provider workflows.
+                Researchers, builders, and health organizations can publish
+                prototypes, explore realistic scenarios, gather structured
+                feedback, and evaluate whether a system is relevant before
+                moving toward real world deployment.
               </p>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed">
-                Through Applina, startups can pressure test workflow fit,
-                surface friction, and refine healthcare solutions before broader
-                deployment.
+                Through Applina, selected systems are extended into structured
+                validation in live clinical workflows, where performance is
+                observed across patient, caregiver, and provider interactions.
               </p>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 leading-relaxed">
-                Built for providers, caregivers, researchers, startups, and the
-                next generation of healthcare innovators.
+                Test workflow fit. Identify failure modes. Refine before
+                deployment.
               </p>
             </div>
           </div>
 
-          <div className="z-20 mt-10 md:mt-12">
+          <div className="z-20 mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 items-center justify-center px-6">
             <Link
-              href="https://medaistudio.moodlecloud.com/login/index.php"
-              target="_blank"
+              href="#"
               className="inline-flex items-center justify-center bg-orange text-white uppercase text-xs sm:text-sm md:text-base font-bold tracking-wide px-8 sm:px-10 md:px-14 py-4 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
             >
-              Access Training
+              Submit Your AI Tool for Real World Validation
             </Link>
+
+            <Link
+              href="#"
+              className="inline-flex items-center justify-center border-2 border-orange text-orange bg-white/95 uppercase text-xs sm:text-sm md:text-base font-bold tracking-wide px-8 sm:px-10 md:px-14 py-4 rounded-3xl text-center hover:bg-orange hover:text-white transition duration-300 ease-in-out"
+            >
+              Join as a Clinical Site
+            </Link>
+          </div>
+
+          <div className="z-20 mt-5 text-center px-6 max-w-4xl mx-auto space-y-1">
+            <p className="text-sm sm:text-base md:text-lg text-white/85">
+              For researchers and small businesses preparing for deployment or partnerships
+            </p>
+            <p className="text-sm sm:text-base md:text-lg text-white/85">
+              For practices interested in evaluating AI tools in real workflows
+            </p>
           </div>
         </div>
       </div>
