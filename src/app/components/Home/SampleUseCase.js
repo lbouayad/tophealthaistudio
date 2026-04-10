@@ -15,14 +15,15 @@ const SampleUseCase = () => {
 
         <div className="mt-10 space-y-5 text-base md:text-lg xl:text-xl leading-relaxed text-justify">
           <p>
-            An AI receptionist prototype is currently being evaluated across
-            scheduling workflows.
+            AI tools for administrative and operational workflows in small
+            clinical practices are currently being evaluated across real
+            scheduling and intake environments.
           </p>
 
           <p>
-            Through CareFlow Shadowing, trained participants observe how the
-            system performs in real care settings, capturing workflow friction
-            across patient, caregiver, and provider interactions.
+            Through structured observation, systems are assessed as they operate
+            in live care settings, capturing workflow friction across patient,
+            caregiver, and provider interactions.
           </p>
 
           <div>
@@ -30,7 +31,7 @@ const SampleUseCase = () => {
             <ul className="list-disc pl-6 space-y-2">
               <li>alignment between available slots and booking logic</li>
               <li>patient readiness and eligibility verification</li>
-              <li>edge cases in new vs returning patient classification</li>
+              <li>edge cases in new versus returning patient classification</li>
             </ul>
           </div>
 
@@ -40,29 +41,26 @@ const SampleUseCase = () => {
           </p>
 
           <p className="font-semibold">
-            This work is ongoing. We are actively expanding participation.
+            This work is ongoing. We are actively expanding participation across
+            additional clinical sites and use cases.
           </p>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
           <Link
-            href="/"
+            href="#"
             className="inline-flex items-center justify-center bg-orange text-white uppercase text-xs sm:text-sm md:text-base font-bold tracking-wide px-8 sm:px-10 md:px-14 py-4 rounded-3xl text-center shadow-lg hover:shadow-xl hover:scale-105 transition duration-300 ease-in-out"
           >
-            Become a CareFlow Shadower
+            Submit Your AI Tool for Real World Validation
           </Link>
 
           <Link
-            href="/"
+            href="#"
             className="inline-flex items-center justify-center border-2 border-orange text-orange uppercase text-xs sm:text-sm md:text-base font-bold tracking-wide px-8 sm:px-10 md:px-14 py-4 rounded-3xl text-center hover:bg-orange hover:text-white transition duration-300 ease-in-out"
           >
-            Join as a Provider Partner
+            Join as a Clinical Site
           </Link>
         </div>
-
-        <p className="text-center text-brown/80 text-sm md:text-base mt-5">
-          No prior experience required. Structured training provided.
-        </p>
       </div>
     </section>
   );
